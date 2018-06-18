@@ -14,7 +14,7 @@ $ npm install
 TODOS:
 - [x] Make linting work good in VS
   - Needs extension, VisualLinter (https://marketplace.visualstudio.com/items?itemName=JeanAlexanderWoldner.VisualLinter)
-- [ ] Decide on Less/cssnext based on VS compatibility - Joe
+- [x] Decide on Less/cssnext based on VS compatibility - FIXED - we will go with LESS.
 - [ ] Folder structure to follow our basic project structure
   - All config files in *.Web
   - All assets under *.Web/Assets/
