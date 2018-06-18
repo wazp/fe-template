@@ -19,12 +19,17 @@ TODOS:
   - All config files in *.Web
   - All assets under *.Web/Assets/
   - All compiled files into */bundled/
-- [ ] Setup linting with a modified StandardJS - Patrick
-- [ ] Basic SuitCSS grid system - Joe
-- [ ] All the SuitCSS utilities - Joe
+- [ ] Setup linting with a modified StandardJS
+- [ ] Basic SuitCSS grid system
+- [ ] All the SuitCSS utilities
 - [ ] Implement new questions based on configurations, ie Vue yes/no, Unit tests yes/no etc etc.
 - [ ] Setup webpack configuration
 - [ ] Find good living styleguide for webpack implementations (SC5?)
 - [ ] Setup unit test examples - Patrick
 - [ ] Setup E2E tests with CrossBrowserTesting.com - Patrick
 - [ ] Create Readme Markdown files with examples of various things we use.
+- [ ] List of reusable Vue components we could use:
+  - [ ] Carousel
+  - [ ] Tabs
+  - [ ] Accordions
+  - ... etc
