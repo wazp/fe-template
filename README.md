@@ -20,8 +20,8 @@ TODOS:
   - All assets under *.Web/Assets/
   - All compiled files into */bundled/
 - [ ] Setup linting with a modified StandardJS
-- [ ] Basic SuitCSS grid system
-- [ ] All the SuitCSS utilities
+- [ ] Take Grid we already have in stuff like AE
+  - [ ] Write documentation about the grid, and show all utilities and how to use the grid system.
 - [ ] Implement new questions based on configurations, ie Vue yes/no, Unit tests yes/no etc etc.
 - [ ] Setup webpack configuration
 - [ ] Find good living styleguide for webpack implementations (SC5?)
