@@ -25,6 +25,7 @@ TODOS:
 - [ ] Implement new questions based on configurations, ie Vue yes/no, Unit tests yes/no etc etc.
 - [ ] Setup webpack configuration
 - [ ] Find good living styleguide for webpack implementations (SC5?)
+- [ ] Find alternative to jQuery Validator working with plain js
 - [ ] Setup unit test examples - Patrick
 - [ ] Setup E2E tests with CrossBrowserTesting.com - Patrick
 - [ ] Create Readme Markdown files with examples of various things we use.
