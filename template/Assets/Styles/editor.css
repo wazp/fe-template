@@ -1,0 +1,136 @@
+@import "/Areas/Consumers/Assets/bundled/main.bundle.css";
+
+body.epi_visualaid a {
+    background-color: inherit;
+}
+
+body{
+    padding-top:0!important;
+}
+
+ul {
+    padding-left: 1em;
+    font-size: 24px;
+    list-style-position: inside;
+}
+
+ul > li {
+    margin-top: .5em;
+}
+
+ul > li&:first-child {
+    margin-top: 0;
+}
+
+
+h1 .u-textBlue .u-textCenter {
+    EditMenuTitle: Consumer Headings;
+    EditMenuName: Hero Title;
+    ChangeElementType: true;
+}
+
+.Heading--h1 {
+    EditMenuName: H1 Heading;
+}
+
+h2 {
+    EditMenuName: H2 Heading;
+}
+
+h3 {
+    EditMenuName: H3 Heading;
+}
+
+h4 {
+    EditMenuName: H4 Heading;
+}
+
+h5 {
+    EditMenuName: H5 Heading;
+}
+
+h6 {
+    EditMenuName: H6 Heading;
+}
+
+p {
+    EditMenuTitle: Consumer Paragraph;
+    ChangeElementType: true;
+}
+
+p.u-textXSmall {
+    EditMenuName: "Text (16px), extra small";
+}
+p.u-textSmall {
+    EditMenuName: "Text (18px), small";
+}
+p.u-textNormal {
+    EditMenuName: "Text (24px), normal";
+}
+p.u-textLarge {
+    EditMenuName: "Text (32px), large";
+}
+p.u-textXLarge {
+    EditMenuName: "Text (48px), extra large";
+}
+
+p.u-textXXLarge {
+    EditMenuName: "Text (72px), extra extra large";
+}
+
+p.Disclaimer {
+    EditMenuName: "Disclaimer Text (14px)";
+}
+
+.u-textBlue {
+    EditMenuTitle: Consumer Text Colors;
+    EditMenuName: Blue;
+    color: #007dd7;
+}
+
+.u-textDarkBlue {
+    EditMenuName: Dark Blue;
+    color: #22324E;
+}
+
+.u-textSkyBlue {
+    EditMenuName: Sky Blue;
+    color: #5bbbeb;
+}
+
+.u-textLightBlue {
+    EditMenuName: Light Blue;
+    color: #9addf4;
+}
+
+.u-textLimeGreen {
+    EditMenuName: Lime Green;
+    color: #8abf2e;
+}
+
+.u-textPaleGreen {
+    EditMenuName: Pale Green;
+    color: #cbd46c;
+}
+
+.u-textWhite {
+    EditMenuName: White;
+    color: #e6e6e6;
+}
+
+a.Button {
+    EditMenuTitle: Consumer Links;
+    EditMenuName: Button;
+}
+a.Link-arrowRight {
+    EditMenuName: Text Button;
+}
+
+.List .List--arrows .List--arrows--blue {
+    EditMenuTitle: Consumer Lists;
+    EditMenuName: Blue Arrow Bulleted List;
+}
+
+.List .List--arrows .List--arrows--white {
+    EditMenuName: White Arrow Bulleted List;
+}

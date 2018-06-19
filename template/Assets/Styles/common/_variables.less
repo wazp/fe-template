@@ -1,0 +1,64 @@
+// Paths
+//styleguide:ignore:start
+@basePath: ~"/Areas/BlackBrand/Assets";
+//styleguide:ignore:end
+
+@import url(https://fonts.googleapis.com/css?family=Oswald:300|Source+Sans+Pro:300,700);
+
+// Fonts
+@fontFamilyBody: 'Source Sans Pro', sans-serif;
+@fontFamilyHeading: 'rainfallregular', sans-serif;
+@fontFamilyNavigation: 'Oswald', sans-serif;
+
+// Colors
+@colorGrey: #F0ECEB;
+@colorDarkGrey: #6C7477;
+@colorDarkGrey2: #444444;
+@colorBlue: #00929e;
+@colorSeaGreen: #19A69D;
+@colorGreen: #77B62A;
+@colorYellow: #FBD80A;
+@colorRed: #C70003;
+@colorBrown: #D1BB8A;
+@colorOrange: #F57D0A;
+@colorWhite: #FFFFFF;
+@colorBlack: #202020;
+
+@linkColor: #A77142; // color for links
+@linkColorHover: #202020; // hover color for links
+@linkColorAlternate: #202020; // alternative color for links
+@linkColorHoverAlternate: #a77142; // alternate hover color for links
+
+@backgroundColor: #fff; // default background color
+
+// Widths and responsive breakpoints
+@widthContainer: 1308px;
+
+//iPhone 5
+@widthXSmall: 300px;
+
+@widthSmall: 500px;
+
+//< 640 == mobile view
+//768 == medium tablet view
+//> 768 == desktop view
+@widthMedium: 740px;
+@widthLarge: 769px;
+
+@widthXLarge: 1308px;
+//styleguide:ignore:start
+@bpXSmall: ~"only screen and (min-width: @{widthXSmall}), print";
+@bpSmall: ~"only screen and (min-width: @{widthSmall}), print";
+@bpMedium: ~"only screen and (min-width: @{widthMedium}), print";
+@bpLarge: ~"only screen and (min-width: @{widthLarge}), print";
+@bpXLarge: ~"only screen and (min-width: @{widthXLarge}), print";
+
+@prefixXSmall: ~"xsm-";
+@prefixSmall: ~"sm-";
+@prefixMedium: ~"md-";
+@prefixLarge: ~"lg-";
+@prefixXLarge: ~"xlg-";
+//styleguide:ignore:end
+// Grid
+
+@gutterSize: 10px; // needs to be in pixels

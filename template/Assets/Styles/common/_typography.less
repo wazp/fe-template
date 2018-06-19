@@ -1,0 +1,103 @@
+@import "./_mixins.less";
+/*
+Typography
+
+The typography used throughout the site
+
+Styleguide 1.0
+*/
+
+/*
+Headers
+
+Markup:
+    <h1>This is a headline</h1>
+    <h2>This is a headline</h2>
+    <h3>This is a headline</h3>
+    <h4>This is a headline</h4>
+    <h5>This is a headline</h5>
+    <h6>This is a headline</h6>
+
+Styleguide 1.1
+*/
+h1, h2, h3, h4, h5, h6,
+.Heading--h1, .Heading--h2, .Heading--h3,.Heading--h4, .Heading--h5, .Heading--h6 {
+    font-family: @fontFamilyHeading;
+    color: @colorBlack;
+    line-height: .9;
+    margin: 0 0 0.5em;
+    font-weight:600;
+    text-transform:uppercase;
+    & + p {
+        margin-top: 0;
+    }
+
+    span{
+        font-family:@fontFamilyNavigation;
+        font-size:26px;
+        text-transform:uppercase;
+        display:block;
+        color:@linkColorAlternate;
+        letter-spacing:2px;
+        font-weight:300;
+    }
+}
+
+h1, .Heading--h1 {
+    font-size: 28px; // mobile 28px
+    @media @bpMedium{ font-size: 40px; } // tablet and up, 40px
+}
+
+h2, .Heading--h2 {
+    font-size: 24px; // mobile 24px
+    @media @bpMedium{ font-size: 32px; } // tablet and up, 32px
+}
+
+h3, .Heading--h3 {
+    font-size: 21px; // mobile 21px
+    @media @bpMedium{ font-size: 24px; line-height: 30px; } // tablet and up, 24px
+}
+
+h4, .Heading--h4 {
+    font-size: 21px; // mobile 21px
+    @media @bpMedium{ font-size: 24px; } // tablet and up, 24px
+}
+
+h5, .Heading--h5 {
+    font-size: 18px; // mobile 18px
+}
+
+h6, .Heading--h6 {
+    font-size: 1em;
+}
+
+/*
+Text
+
+Markup:
+    <p>This is regular content text. It is used for all regular text on the site, like article pages, tab contents etc.</p>
+
+Styleguide 1.3
+*/
+p {
+    font-family:@fontFamilyBody;
+    margin: 1em 0;
+    color: @colorBlack;
+}
+
+/*
+Content Links
+
+Markup:
+    <p>This is <a href="#">a link</a> inside regular content text. Also used in breadcrumbs.
+
+Styleguide 1.4
+*/
+a {
+    color: @linkColor;
+    text-decoration:none;
+}
+
+a:hover {
+	color: @linkColorHover;
+}

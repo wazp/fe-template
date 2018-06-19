@@ -1,0 +1,107 @@
+/*#
+
+Custom styling for Select dropdowns. Supports focus and disabled states.
+
+Examples:
+
+<div>
+    <span class="Select u-sm-size1of3X">
+        <select class="Select-input">
+            <option>Select an option</option>
+            <option>Invoice</option>
+            <option>Emergency</option>
+            <option>Question</option>
+            <option>A very long item is here that will never end</option>
+            <option>Other</option>
+        </select>
+    </span>
+</div>
+
+*/
+
+@import "../../common/variables.less";
+
+.Select {
+    position: relative;
+    padding: 0;
+    display: inline-block;
+    background: #fff;
+    border: 1px solid @blue;
+    border-radius: 10px;
+
+    &:after {
+        content: "";
+        position: absolute;
+        width: 2.2em;
+        top: 1px;
+        bottom: 1px;
+        right: 1px;
+        /*background-color: lighten(@light-gray, 10%);*/
+        background-image: url("/Areas/Consumers/Assets/Images/SVG/chevron-right.svg");
+        background-repeat: no-repeat;
+        background-size: 12px 12px;
+        background-position: center;
+        transform: rotate(90deg);
+        pointer-events: none;
+        z-index: 2;
+    }
+}
+
+.Select-input {
+    width: 100%;
+    margin: 0;
+    background: none;
+    border: 1px solid transparent;
+    outline: none;
+    cursor: pointer;
+    appearance: none;
+    vertical-align: middle;
+    padding: .8em 1em;
+    padding-right: 3em;
+    font-family: @calibre;
+    font-size: 1.25em;
+    color: @blue;
+
+    &:hover {
+        /*box-shadow: 0 0 1px 1px darken(@light-gray, 15%);*/
+    }
+
+    &:focus {
+        outline: none;
+        /*box-shadow: 0 0 1px 1px @colorFocus;*/
+    }
+
+    &:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+
+        &:hover {
+            box-shadow: none;
+        }
+    }
+}
+
+.is-no-appearance {
+    .Select {
+        overflow: hidden;
+    }
+
+    .Select-input {
+        width: ~"calc(100% + 60px)";
+    }
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    // IE 10/11+ - This hides native dropdown button arrow so it will have the custom appearance,
+    // IE 9 and earlier get a native select - targeting media query hack via http://browserhacks.com/#hack-28f493d247a12ab654f6c3637f6978d5
+    .Select-input::-ms-expand {
+        display: none;
+    }
+
+    // This removes the odd blue bg color behind the text in the select button in IE 10/11
+    // and sets the text color to match the focus style's - fix via http://stackoverflow.com/questions/17553300/change-ie-background-color-on-unopened-focused-select-box
+    .Select-input:focus::-ms-value {
+        background: transparent;
+        color: @colorText;
+    }
+}
