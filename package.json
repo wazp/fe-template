@@ -1,0 +1,14 @@
+{
+  "name": "fe-template",
+  "version": "0.0.1",
+  "license": "All Rights Reserved",
+  "private": true,
+  "description": "Vue-cli template based on a mix of Webpack-simple and Webpack",
+  "scripts": {
+    "build": "vue init . test-template",
+    "clean": "rm -rf ./test-template"
+  },
+  "devDependencies": {
+    "vue-cli": "^2.8.1"
+  }
+}
