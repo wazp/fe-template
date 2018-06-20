@@ -1,11 +1,11 @@
 # The {{name}} FE Build process
 
-{{name}} is using webpack as the main Front End build. This document outlines the step  
+{{name}} is using webpack as the main Front End build. This document outlines the step
 ALL developers have to take to get it all up and running.
 
 ## External tools needing install
 
-You have a couple of external tools you need to install on your machine. This we can't make  
+You have a couple of external tools you need to install on your machine. This we can't make
 Visual Studio do for us automatically, unfortunately.
 
 ### Node.js
@@ -27,7 +27,7 @@ Visual Studio do for us automatically, unfortunately.
     2. Go to **Tools** > **Options**
     3. Navigate to **Projects and Solutions** > **External Web Tools**
     4. Make sure `$(PATH)` is on the top of the list by clicking the up arrow to move it to the top of the list.
-    ![Image of External Web Tools setup](https://border0.net/fe_documentation/external_web_tools.png)
+    ![Image of External Web Tools setup](https://raw.githubusercontent.com/wazp/fe-template/master/doc/vs_tools.png)
     
 >This makes Visual Studio use the newly installed Node.js instead  
 >of the seriously outdated internally installed version.
@@ -37,13 +37,14 @@ Visual Studio do for us automatically, unfortunately.
 1. In Visual Studio, go to **Tools** > **Extensions and Updates**
 2. Click **Online** in the left list, so you see online extensions ready to be installed.
 3. Search for **NPM Task Runner** and install it.
-![Image of External Web Tools setup](https://border0.net/fe_documentation/npm_task_runner.png)
+![Image of External Web Tools setup](https://raw.githubusercontent.com/wazp/fe-template/master/doc/vs_npm_runner.png)
 >If already installed, please check if there's any update to be downloaded.
 
 ### Command line work
 
-Ok, so we have the Visual Studio tools installed as well as the latest version of Node.js, time for some  
-`cmd` action!
+Ok, so we have the Visual Studio tools installed as well as the latest version of Node.js. When opening up the project in Visual Studio, the
+nom packages should install automatically in the background. However, this doesn't always happen and personally I prefer to do it myself so I can see
+exactly what is going on during the install. So, time for some `cmd` action!
 
 1. Open up a command prompt in Elevated Mode (**Right Click** > **Open As Administrator**)
 2. Navigate to the `{{name}}.web` directory, wherever you are saving your projects and run `npm install`:
@@ -52,22 +53,25 @@ Ok, so we have the Visual Studio tools installed as well as the latest version o
    > npm install -g webpack
    > npm install
    ```
-3. This should install all the neccessary node modules needed. 
+   A good way of getting to a cmd prompt, sitting in the correct directory from start, is to right-click your Web project and choose "Open Command Line" > "Default" - or whatever you prefer.
+   ![Image of Open Command Line](https://raw.githubusercontent.com/wazp/fe-template/master/doc/vs_open_command.png)
+   
+3. This should install all the neccessary node modules needed.
 >npm can bug out at times when installing many modules at once, so you may have to run it multiple times to make sure you get them all. Sometimes Visual Studio might be installing them in the background as well, and the installs clash.
 
 ## Running the build
 
-package.json have been configured to run one of the npm scripts on *Project Open*, that starts a watcher in the background  
-that picks up on any changes to the source code to trigger a rebuild. 
+package.json have been configured to run one of the npm scripts on *Project Open*, that starts a watcher in the background
+that picks up on any changes to the source code to trigger a rebuild.
 
-It is also configured to run the `dev` script on every Build you do in Visual Studio, to make sure the Back End developers  
+It is also configured to run the `dev` script on every Build you do in Visual Studio, to make sure the Back End developers
 also have a latest compiled code.
 
 If you want to manually trigger a build, you can do so from the Task Runner Explorer (`Ctrl-Alt-Bkspace`), or if you prefer with the command line:
 ```console
 > npm run dev
 ```
-TODO: Update this later on to include the correct stuff!
+>*TODO: Update this later on to include the correct stuff!*
 Other options include:
 - `build` for a production build
 - `lint` for fixing common lint errors
