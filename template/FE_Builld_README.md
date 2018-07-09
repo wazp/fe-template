@@ -73,7 +73,9 @@ If you want to manually trigger a build, you can do so from the Task Runner Expl
 ```
 >*TODO: Update this later on to include the correct stuff!*
 Other options include:
+- `dev` for a development build
 - `build` for a production build
+- `watcher` to start the watcher (you probably don't want this running outside of the NPM Task runner in VS)
 - `lint` for fixing common lint errors
 - `test` for unit tests
 - `e2e` to trigger E2E tests with crossbrowsertraining.com
