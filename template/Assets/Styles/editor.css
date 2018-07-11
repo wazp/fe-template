@@ -1,4 +1,4 @@
-@import "/Areas/Consumers/Assets/bundled/main.bundle.css";
+@import "bundled/main.bundle.css";
 
 body.epi_visualaid a {
     background-color: inherit;

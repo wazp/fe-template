@@ -1,8 +1,9 @@
+@import "../common/_variables.less";
+@import "../common/_mixins.less";
+
 /** @define Arrange; weak */
 
-:root {
-  --Arrange-gutter-size: 10px;
-}
+@Arrange-gutter-size: 10px;
 
 /**
  * This component lets you lay out a row of cells in various ways. You can
@@ -144,12 +145,13 @@
  */
 
 .Arrange--withGutter {
-  margin: 0 calc(-0.5 * var(--Arrange-gutter-size));
+  margin: 0 calc(-0.5 * @Arrange-gutter-size);
 }
+
 
 .Arrange--withGutter > .Arrange-sizeFit,
 .Arrange--withGutter > .Arrange-sizeFill,
 .Arrange--withGutter > .Arrange-row > .Arrange-sizeFit,
 .Arrange--withGutter > .Arrange-row > .Arrange-sizeFill {
-  padding: 0 calc(0.5 * var(--Arrange-gutter-size));
+  padding: 0 calc(0.5 * @Arrange-gutter-size);
 }

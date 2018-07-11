@@ -1,13 +1,14 @@
+@import "../common/_variables.less";
+@import "../common/_mixins.less";
+
 /** @define Button */
 
-:root {
-  --Button-border-color: currentcolor;
-  --Button-border-width: 1px;
-  --Button-color: inherit;
-  --Button-disabled-opacity: 0.6;
-  --Button-font: inherit;
-  --Button-padding: 0.4em 0.75em;
-}
+@Button-border-color: currentcolor;
+@Button-border-width: 1px;
+@Button-color: inherit;
+@Button-disabled-opacity: 0.6;
+@Button-font: inherit;
+@Button-padding: 0.4em 0.75em;
 
 /**
  * The button classes are best applied to links and buttons.
@@ -23,18 +24,38 @@
  * 4. Prevent button text from being selectable.
  */
 
+/*
+---
+name: Button
+category: Components
+---
+
+Buttons can be used with `<a>`, `<button>`, and `<input>` elements.
+
+Types of buttons:
+- Default: Standard button
+- Primary: Provides extra visual weight and identifies the primary action in a set of buttons
+- Success: Indicates a successful or positive action
+
+```types.html
+<button class="Button">Default</button>
+<button class="Button Button-primary">Primary</button>
+<button class="Button Button-success">Success</button>
+```
+*/
+
 .Button {
   background: transparent;
-  border-color: var(--Button-border-color);
+  border-color: @Button-border-color;
   border-radius: 0;
   border-style: solid;
-  border-width: var(--Button-border-width);
+  border-width: @Button-border-width;
   box-sizing: border-box; /* 1 */
-  color: var(--Button-color); /* 2 */
+  color: @Button-color; /* 2 */
   display: inline-block;
-  font: var(--Button-font); /* 3 */
+  font: @Button-font; /* 3 */
   margin: 0;
-  padding: var(--Button-padding);
+  padding: @Button-padding;
   position: relative;
   text-align: center;
   text-decoration: none;
@@ -49,6 +70,7 @@
   border: 0;
   padding: 0;
 }
+
 
 /**
  * Work around a Firefox/IE bug where the transparent `button` background
@@ -73,5 +95,5 @@
 .Button:disabled,
 .Button.is-disabled {
   cursor: default;
-  opacity: var(--Button-disabled-opacity);
+  opacity: @Button-disabled-opacity;
 }

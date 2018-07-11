@@ -1,14 +1,8 @@
-// Paths
-//styleguide:ignore:start
-@basePath: ~"/Areas/BlackBrand/Assets";
-//styleguide:ignore:end
-
-@import url(https://fonts.googleapis.com/css?family=Oswald:300|Source+Sans+Pro:300,700);
-
 // Fonts
 @fontFamilyBody: 'Source Sans Pro', sans-serif;
 @fontFamilyHeading: 'rainfallregular', sans-serif;
 @fontFamilyNavigation: 'Oswald', sans-serif;
+@baseFontSize: 16;
 
 // Colors
 @colorGrey: #F0ECEB;
@@ -23,6 +17,8 @@
 @colorOrange: #F57D0A;
 @colorWhite: #FFFFFF;
 @colorBlack: #202020;
+@colorFocus: blue;
+@colorText: @colorGrey;
 
 @linkColor: #A77142; // color for links
 @linkColorHover: #202020; // hover color for links
@@ -46,7 +42,7 @@
 @widthLarge: 769px;
 
 @widthXLarge: 1308px;
-//styleguide:ignore:start
+
 @bpXSmall: ~"only screen and (min-width: @{widthXSmall}), print";
 @bpSmall: ~"only screen and (min-width: @{widthSmall}), print";
 @bpMedium: ~"only screen and (min-width: @{widthMedium}), print";
@@ -58,7 +54,15 @@
 @prefixMedium: ~"md-";
 @prefixLarge: ~"lg-";
 @prefixXLarge: ~"xlg-";
-//styleguide:ignore:end
+
 // Grid
 
 @gutterSize: 10px; // needs to be in pixels
+
+// - Space -
+@spaceDefault: unit(20 / @baseFontSize, em);
+@spaceXSmall: @spaceDefault / 2;
+@spaceSmall: @spaceDefault / 1.5;
+@spaceMedium: @spaceDefault;
+@spaceLarge: @spaceDefault * 1.5;
+@spaceXLarge: @spaceDefault * 2;
