@@ -1,15 +1,25 @@
 var path = require('path')
 var webpack = require('webpack')
+var extractTextPlugin = require("extract-text-webpack-plugin")
 
 module.exports = {
-    entry: './src/main.js',
+    entry: {
+        main: [
+            './src/main.js',
+            './Assets/Styles/Main.less'
+        ]
+    },
     output: {
-        path: path.resolve(__dirname, './dist'),
-        publicPath: '/dist/',
-        filename: 'build.js'
+        filename: "[name].bundle.js",
+        path: path.resolve(__dirname, "./Assets/bundled")
     },
     module: {
-        rules: [{
+        rules: [
+            {
+                test: /\.less$/,
+                loader: extractTextPlugin.extract('css-loader!postcss-loader!less-loader!import-glob-loader')
+            },
+            {
                 test: /\.css$/,
                 use: [
                     'vue-style-loader',
@@ -28,14 +38,12 @@ module.exports = {
                 test: /\.js$/,
                 exclude: [/node_modules/],
                 use: [
-                    {{#lint}}
                     {
                         loader: 'eslint-loader',
                         options: {
                             formatter: require('eslint-friendly-formatter')
                         }
                     },
-                    {{/lint}}
                     {
                         loader: 'babel-loader'
                     }
@@ -50,6 +58,10 @@ module.exports = {
             }
         ]
     },
+    plugins: [
+        new extractTextPlugin('[name].bundle.css'), // save the css as external files instead of bundling them into the javascripts
+        new webpack.WatchIgnorePlugin([/node_modules/]) // turn off watcher for node_modules and our vueImports.js file created above
+    ],
     resolve: {
         alias: {
             'vue$': 'vue/dist/vue.esm.js'
