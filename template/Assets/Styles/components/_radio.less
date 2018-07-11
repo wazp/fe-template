@@ -61,7 +61,7 @@ Examples:
     &:before {
         content: "";
         background: #fff;
-        border: 2px solid @gray;
+        border: 2px solid @colorGrey;
         display: inline-block;
         width: 1em;
         height: 1em;
@@ -74,6 +74,6 @@ Examples:
 }
 
 .Radio-input:checked + .Radio-label:before {
-    background: darken(@gray, 40%);
+    background: darken(@colorGrey, 40%);
     box-shadow: @Radio-checkedShadow;
 }
