@@ -15,12 +15,12 @@ TODOS:
 - [x] Make linting work good in VS
   - Needs extension, VisualLinter (https://marketplace.visualstudio.com/items?itemName=JeanAlexanderWoldner.VisualLinter)
 - [x] Decide on Less/cssnext based on VS compatibility - FIXED - we will go with LESS.
-- [ ] Folder structure to follow our basic project structure
+- [x] Folder structure to follow our basic project structure
   - All config files in *.Web
   - All assets under *.Web/Assets/
   - All compiled files into */bundled/
 - [ ] Setup linting with a modified StandardJS
-- [ ] Take Grid we already have in stuff like AE
+- [x] Take Grid we already have in stuff like AE
   - [ ] Write documentation about the grid, and show all utilities and how to use the grid system.
 - [ ] Implement new questions based on configurations, ie Vue yes/no, Unit tests yes/no etc etc.
 - [ ] Setup webpack configuration
@@ -33,4 +33,9 @@ TODOS:
   - [ ] Carousel
   - [ ] Tabs
   - [ ] Accordions
+  - ... etc
+- [ ] List of HTML/CSS components we could use:
+  - [ ] Main Menu Dropdowns
+  - [ ] Megamenu?
+  - [ ] Full Width Hero
   - ... etc

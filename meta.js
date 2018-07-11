@@ -62,7 +62,7 @@ module.exports = {
     // router: {
     //   when: 'vue',
     //   type: 'confirm',
-    //   message: 'Install vue-router?',
+    //   message: 'Install vue-router (Only for SPA)?',
     // },
     lint: {
       type: 'confirm',
@@ -79,17 +79,17 @@ module.exports = {
     autoInstall: {
       type: 'list',
       message:
-        'Should we run `npm install` for you after the project has been created? (recommended)',
+        'Should we run `[yarn|npm] install` for you after the project has been created? (recommended)',
       choices: [
+        {
+          name: 'Yes, use Yarn (recommended if installed)',
+          value: 'yarn',
+          short: 'yarn',
+        },
         {
           name: 'Yes, use NPM',
           value: 'npm',
           short: 'npm',
-        },
-        {
-          name: 'Yes, use Yarn',
-          value: 'yarn',
-          short: 'yarn',
         },
         {
           name: 'No, I will handle that myself',
