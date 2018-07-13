@@ -24,7 +24,14 @@ TODOS:
   - [ ] Write documentation about the grid, and show all utilities and how to use the grid system.
 - [ ] Implement new questions based on configurations, ie Vue yes/no, Unit tests yes/no etc etc.
 - [ ] Setup webpack configuration
-- [ ] Find good living styleguide for webpack implementations (SC5?)
+- [x] Find good living styleguide for webpack implementations
+  - [x] [Stylemark](https://github.com/nextbigsoundinc/stylemark) - Branch: styleguide-stylemark | Review - Best one so far, we just need to see if it can include vue components.
+    - [ ] Test including vue components
+  - [x] [SC5](https://github.com/SC5/sc5-styleguide) - Branch: styleguide | Review - Has too many errors when using basic less functions.
+  - [x] [DevBridge](https://github.com/devbridge/Styleguide) - Branch: styleguide-devbridge | Review - Not robust enough for us, only generates stuff thats in variables. Rest of styles and markup have to be inputted manually, and not inside our source code.
+- [ ] Cleanup CSS
+  - [ ] Eliminate some styles since this was coppied from another site.
+  - [ ] Add any base styles that we would like to have (ex: Forms)
 - [ ] Find alternative to jQuery Validator working with plain js
 - [ ] Setup unit test examples - Patrick
 - [ ] Setup E2E tests with CrossBrowserTesting.com - Patrick
