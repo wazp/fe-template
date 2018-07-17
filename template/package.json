@@ -16,6 +16,9 @@
     {{#vue}}
     "vue": "^2.5.11",
     {{/vue}}
+    {{#vuex}}
+    "vuex": "^3.0.1",
+    {{/vuex}}
     "whatwg-fetch": "^2.0.4"
   },
   "browserslist": [

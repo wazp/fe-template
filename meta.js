@@ -41,6 +41,11 @@ module.exports = {
       type: 'confirm',
       message: 'Install Vue?'
     },
+    vuex:{
+      when:'vue',
+      type:'confirm',
+      message:'Install Vuex store?'
+    },
     // build: {
     //   when: 'vue',
     //   type: 'list',

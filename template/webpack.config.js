@@ -113,7 +113,7 @@ module.exports = {
     resolve: {
         alias: {
             {{#vue}}
-            'vue': 'vue/dist/vue.esm.js',
+            'vue': 'vue/dist/vue.js',
             '@Components': path.resolve(__dirname, 'Assets/vue/components'),
             {{/vue}}
             '@': path.join(__dirname, 'Assets'),

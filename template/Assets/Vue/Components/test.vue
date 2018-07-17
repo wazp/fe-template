@@ -1,12 +1,25 @@
 <template>
     <div>
         <p>This is a test vue component, which is part of the initial build process.</p>
+        {{#vuex}}
+        <button @click="buttonClick">Click to count up store variable</button>
+        {{/vuex}}
     </div>
 </template>
 
 <script>
     export default {
-        name: 'test'
+        name: 'test',
+        {{#vuex}}
+        methods: {
+            buttonClick() {
+                this.$store.commit('clickUp')
+            }
+        },
+        {{/vuex}}
+        data() {
+            return {}
+        }
     }
 </script>
 
