@@ -75,10 +75,10 @@ To get started:
   ${yellow(
     `${data.inPlace ? '' : `cd ${data.destDirName}\n  `}${installMsg(
       data
-    )}${lintMsg(data)}npm run dev`
+    )}${lintMsg(data)}npm run dev (or if using yarn: yarn)`
   )}
   
-Documentation can be found in ./README.md
+Documentation can be found in ./README.md. You can also take a look at ./html/template_demo.html for a quick demo of the grid etc.
 `
   console.log(message)
 }
