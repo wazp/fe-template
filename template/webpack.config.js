@@ -47,9 +47,9 @@ module.exports = {
         ]
     },
     output: {
-        filename: "[name].bundle.js",
-        publicPath: 'Assets/bundled/',
-        path: path.resolve(__dirname, "./Assets/bundled"),
+        filename: '[name].bundle.js',
+        publicPath: '../Assets/bundled/', // IMPORTANT! Should be made absolute when not looking at the demos in ./html!
+        path: path.resolve(__dirname, './Assets/bundled'),
 
     },
     node: {
@@ -114,10 +114,10 @@ module.exports = {
         alias: {
             {{#vue}}
             'vue': 'vue/dist/vue.esm.js',
+            '@Components': path.resolve(__dirname, 'Assets/vue/components'),
             {{/vue}}
             '@': path.join(__dirname, 'Assets'),
-            '@Components': path.resolve(__dirname, 'Assets/vue/components'),
-            '@Views': path.resolve(__dirname, 'Views')
+            '@Views': path.resolve(__dirname, 'Views'),
         },
         extensions: ['*', '.js', {{#vue}}'.vue',{{/vue}} '.json']
     },
