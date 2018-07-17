@@ -2,10 +2,19 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>{{ name }}</title>
+    <title>test-template</title>
+    <link rel="Stylesheet" href="./Assets/bundled/main.bundle.css" />
   </head>
   <body>
-    <div id="app"></div>
-    <script src="/dist/build.js"></script>
+    <div id="App">
+      {{#vue}}
+      <test></test>
+      <testondemand></testondemand>
+      {{/vue}}
+      {{^vue}}
+      <p>No Vue here!</p>
+      {{/vue}}
+    </div>
+    <script src="./Assets/bundled/main.bundle.js"></script>
   </body>
 </html>

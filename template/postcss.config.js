@@ -1,6 +1,6 @@
 module.exports = {
     plugins: {
-        autoprefixer: { browsers: ['last 3 versions', 'iOS >= 8'] },
+        autoprefixer: {},
         'postcss-pxtorem': {},
         'postcss-color-rgba-fallback': {},
         'css-mqpacker': { sort: true },

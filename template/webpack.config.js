@@ -1,81 +1,129 @@
-var path = require('path')
-var webpack = require('webpack')
-var extractTextPlugin = require("extract-text-webpack-plugin")
+var path = require('path'),
+    glob = require('glob'),
+    fs = require('fs')
+    webpack = require('webpack'),
+    extractTextPlugin = require('extract-text-webpack-plugin'),
+    vueFiles = glob.sync('./Assets/vue/OnDemand/*.vue'),
+    vueImports = './Assets/Scripts/vueImports.js';
 
+{{#vue}}
+/*
+ * Go through all *.vue templates and create one file we can import, that initializes them all as components
+ */
+fs.stat(vueImports, function (err, fileStat) { // check if file exists
+    if (err) {
+        if (err.code == 'ENOENT') {
+            console.log('\x1b[33m%s\x1b[0m', vueImports + ' does not exist yet so no need to delete.');
+        }
+    } else { // it does, so delete it.
+        fs.unlink(vueImports, function (err) {
+            if (err) throw err;
+            console.log('\x1b[33m%s\x1b[0m', 'Removed ' + vueImports + '. Creating a new one with the following files:');
+        });
+    }
+
+    var fileStream = fs.createWriteStream(vueImports);
+    fileStream.once('open', (fd) => {
+        fileStream.write("import Vue from 'vue'\r\n");
+        vueFiles.forEach((file) => {
+            console.log('\x1b[32m%s\x1b[0m', "file: " + file);
+            var nameNoExt = path.basename(path.basename(file), '.vue');
+            fileStream.write('Vue.component(\'' + nameNoExt + '\', () => import(/* webpackChunkName: "' + nameNoExt + '" */ \'@/Vue/OnDemand/' + nameNoExt + '.vue\'))\r\n');
+        });
+        fileStream.end();
+        console.log('\x1b[33m%s\x1b[0m', 'Done creating ' + vueImports + '.');
+    });
+});
+{{/vue}}
+
+// Webpack config
 module.exports = {
     entry: {
         main: [
-            //'./src/main.js',
+            'babel-polyfill',
+            'whatwg-fetch',
+            './Assets/Scripts/Main.js',
             './Assets/Styles/Main.less'
         ]
     },
     output: {
         filename: "[name].bundle.js",
-        path: path.resolve(__dirname, "./Assets/bundled")
+        publicPath: 'Assets/bundled/',
+        path: path.resolve(__dirname, "./Assets/bundled"),
+
+    },
+    node: {
+        fs: "empty"
     },
     module: {
         rules: [
             {
                 test: /\.less$/,
+                exclude: [/node_modules/],
                 loader: extractTextPlugin.extract('css-loader!postcss-loader!less-loader!import-glob-loader')
             },
-            {
-                test: /\.css$/,
-                use: [
-                    'vue-style-loader',
-                    'css-loader'
-                ],
-            },
+            {{#vue}}
             {
                 test: /\.vue$/,
-                loader: 'vue-loader',
-                options: {
-                    loaders: {}
-                    // other vue-loader options go here
-                }
+                exclude: [/node_modules/],
+                loader: 'vue-loader'
             },
+            {{/vue}}
             {
                 test: /\.js$/,
                 exclude: [/node_modules/],
                 use: [
                     {
+                        loader: 'babel-loader'
+                    },
+                    {
                         loader: 'eslint-loader',
                         options: {
                             formatter: require('eslint-friendly-formatter')
                         }
-                    },
-                    {
-                        loader: 'babel-loader'
                     }
                 ]
             },
-            {
-                test: /\.(png|jpg|gif|svg)$/,
-                loader: 'file-loader',
-                options: {
-                    name: '[name].[ext]?[hash]'
-                }
+            { // SVG symbols to be made into a sprite SVG!
+                test: /\.svg$/,
+                include: path.resolve(__dirname, "Assets/svg/symbol/"),
+                exclude: /node_modules/,
+                use: [
+                    { loader: 'svg-sprite-loader' },
+                    {
+                        loader: 'svgo-loader',
+                        options: {
+                            plugins: [
+                                { removeTitle: true },
+                                { removeViewbox: false },
+                                { removeDimensions: false },
+                                { convertPathData: false },
+                                { removeUselessStrokeAndFill: true }
+                            ]
+                        }
+                    }
+                ]
             }
         ]
     },
     plugins: [
         new extractTextPlugin('[name].bundle.css'), // save the css as external files instead of bundling them into the javascripts
-        new webpack.WatchIgnorePlugin([/node_modules/]) // turn off watcher for node_modules and our vueImports.js file created above
+        new webpack.WatchIgnorePlugin([/node_modules/]) // turn off watcher for node_modules
     ],
     resolve: {
         alias: {
-            'vue$': 'vue/dist/vue.esm.js'
+            {{#vue}}
+            'vue': 'vue/dist/vue.esm.js',
+            {{/vue}}
+            '@': path.join(__dirname, 'Assets'),
+            '@Components': path.resolve(__dirname, 'Assets/vue/components'),
+            '@Views': path.resolve(__dirname, 'Views')
         },
-        extensions: ['*', '.js', '.vue', '.json']
+        extensions: ['*', '.js', {{#vue}}'.vue',{{/vue}} '.json']
     },
-    devServer: {
-        historyApiFallback: true,
-        noInfo: true,
-        overlay: true
-    },
-    performance: {
-        hints: false
-    },
+    // performance: {
+    //     hints: false
+    // },
     devtool: '#eval-source-map'
 }
 
