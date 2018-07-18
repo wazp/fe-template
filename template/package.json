@@ -7,14 +7,49 @@
   "private": true,
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack",
+    "dev:watch": "cross-env NODE_ENV=development webpack -w",
+    {{#lint}}
+    "lint": "eslint --ext .js,.vue assets",
+    "lint:fix": "npm run lint -- --fix",
+    {{/lint}}
     "build": "cross-env NODE_ENV=production webpack"
   },
   "dependencies": {
+    "babel-core": "^6.26.0",
     "babel-eslint": "^8.2.6",
+    "babel-loader": "^7.1.2",
     "babel-plugin-syntax-dynamic-import": "^6.18.0",
     "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-stage-3": "^6.24.1",
+    {{#lint}}
+    "eslint": "^4.19.1",
+    "eslint-config-standard": "^11.0.0",
+    "eslint-friendly-formatter": "^4.0.1",
+    "eslint-loader": "^2.0.0",
+    "eslint-plugin-html": "^4.0.5",
+    "eslint-plugin-import": "^2.12.0",
+    "eslint-plugin-node": "^6.0.1",
+    "eslint-plugin-promise": "^3.8.0",
+    "eslint-plugin-standard": "^3.1.0",
+    {{/lint}}
+    "cross-env": "^5.0.5",
+    "css-loader": "^0.28.7",
+    "webpack": "^3.6.0",
+    "css-mqpacker": "^6.0.2",
+    "cssnano": "^4.0.0",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "import-glob-loader": "^1.1.0",
+    "less": "^3.6.0",
+    "less-loader": "^4.1.0",
+    "postcss-color-rgba-fallback": "^3.0.0",
+    "postcss-less": "^2.0.0",
+    "postcss-loader": "^2.1.6",
+    "postcss-pxtorem": "^4.0.1",
     {{#vue}}
     "vue": "^2.5.11",
+    "vue-loader": "^13.0.5",
+    "vue-template-compiler": "^2.4.4",
     {{/vue}}
     {{#router}}
     "vue-router": "^3.0.1",
@@ -30,36 +65,10 @@
     "not ie <= 10"
   ],
   "devDependencies": {
-    "babel-core": "^6.26.0",
-    "babel-loader": "^7.1.2",
-    "babel-preset-env": "^1.6.0",
-    "babel-preset-stage-3": "^6.24.1",
-    {{#lint}}
-    "eslint": "^4.19.1",
-    "eslint-config-standard": "^11.0.0",
-    "eslint-friendly-formatter": "^4.0.1",
-    "eslint-loader": "^2.0.0",
-    "eslint-plugin-import": "^2.12.0",
-    "eslint-plugin-node": "^6.0.1",
-    "eslint-plugin-promise": "^3.8.0",
-    "eslint-plugin-standard": "^3.1.0",
-    {{/lint}}
-    "cross-env": "^5.0.5",
-    "css-loader": "^0.28.7",
-    {{#vue}}
-    "vue-loader": "^13.0.5",
-    "vue-template-compiler": "^2.4.4",
-    {{/vue}}
-    "webpack": "^3.6.0",
-    "css-mqpacker": "^6.0.2",
-    "cssnano": "^4.0.0",
-    "extract-text-webpack-plugin": "^3.0.2",
-    "import-glob-loader": "^1.1.0",
-    "less": "^3.6.0",
-    "less-loader": "^4.1.0",
-    "postcss-color-rgba-fallback": "^3.0.0",
-    "postcss-less": "^2.0.0",
-    "postcss-loader": "^2.1.6",
-    "postcss-pxtorem": "^4.0.1"
+  },
+  "-vs-binding": {
+      "ProjectOpened": [
+          "dev:watch"
+      ]
   }
 }

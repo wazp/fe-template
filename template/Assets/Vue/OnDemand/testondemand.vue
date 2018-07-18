@@ -19,7 +19,7 @@
         {{/vuex}}
         data() {
             return {}
-        }      
+        }
     }
 </script>
 

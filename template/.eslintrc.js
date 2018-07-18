@@ -16,6 +16,9 @@ module.exports = {
         'space-before-function-paren': 0, // VS Defaults
         'space-before-blocks': 1, // VS Defaults
         'object-shorthand': 1
-    }
+    },
+    'plugins': [
+        'html'
+    ]
   }
   
