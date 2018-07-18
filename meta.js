@@ -49,7 +49,7 @@ module.exports = {
     router: {
       when: 'vue',
       type: 'confirm',
-      message: 'Install vue-router?',
+      message: 'Install Vue-router?',
     },
     lint: {
       type: 'confirm',
@@ -57,7 +57,7 @@ module.exports = {
     },
     // unit: {
     //   type: 'confirm',
-    //   message: 'Set up unit tests',
+    //   message: 'Set up unit tests with Jest?',
     // },
     // e2e: {
     //   type: 'confirm',
@@ -94,13 +94,9 @@ module.exports = {
     '.eslintrc.js': 'lint',
     '.eslintignore': 'lint',
     'config/test.env.js': 'unit || e2e',
-    'build/webpack.test.conf.js': "unit && runner === 'karma'",
     'test/unit/**/*': 'unit',
-    'test/unit/index.js': "unit && runner === 'karma'",
-    'test/unit/jest.conf.js': "unit && runner === 'jest'",
-    'test/unit/karma.conf.js': "unit && runner === 'karma'",
-    'test/unit/specs/index.js': "unit && runner === 'karma'",
-    'test/unit/setup.js': "unit && runner === 'jest'",
+    'test/unit/jest.conf.js': "unit",
+    'test/unit/setup.js': "unit",
     'test/e2e/**/*': 'e2e'
   },
   complete: function(data, { chalk }) {

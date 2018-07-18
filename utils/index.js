@@ -50,10 +50,7 @@ exports.runLintFix = function runLintFix(cwd, data, color) {
       )}`
     )
     console.log('# ========================\n')
-    const args =
-      data.autoInstall === 'npm'
-        ? ['run', 'lint', '--', '--fix']
-        : ['run', 'lint', '--fix']
+    const args = ['run', 'lint:fix']
     return runCommand(data.autoInstall, args, {
       cwd,
     })
@@ -75,7 +72,7 @@ To get started:
   ${yellow(
     `${data.inPlace ? '' : `cd ${data.destDirName}\n  `}${installMsg(
       data
-    )}${lintMsg(data)}npm run dev (or if using yarn: yarn)`
+    )}${lintMsg(data)}${data.autoInstall} run dev`
   )}
   
 Documentation can be found in ./README.md. You can also take a look at ./html/template_demo.html for a quick demo of the grid etc.
@@ -92,7 +89,7 @@ function lintMsg(data) {
   return !data.autoInstall &&
     data.lint &&
     lintStyles.indexOf(data.lintConfig) !== -1
-    ? 'npm run lint -- --fix (or for yarn: yarn run lint --fix)\n  '
+    ? `${data.autoInstall} run lint:fix\n  `
     : ''
 }
 
@@ -102,7 +99,7 @@ function lintMsg(data) {
  * @param {Object} data Data from the questionnaire
  */
 function installMsg(data) {
-  return !data.autoInstall ? 'npm install (or if using yarn: yarn)\n  ' : ''
+  return !data.autoInstall ? `${data.autoInstall} install\n  ` : ''
 }
 
 /**
