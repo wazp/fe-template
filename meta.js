@@ -46,29 +46,11 @@ module.exports = {
       type:'confirm',
       message:'Install Vuex store?'
     },
-    // build: {
-    //   when: 'vue',
-    //   type: 'list',
-    //   message: 'Vue build',
-    //   choices: [
-    //     {
-    //       name: 'Runtime + Compiler (recommended)',
-    //       value: 'standalone',
-    //       short: 'standalone',
-    //     },
-    //     {
-    //       name:
-    //         'Runtime-only: about 6KB lighter min+gzip, but templates (or any Vue-specific HTML) are ONLY allowed in .vue files - render functions are required elsewhere',
-    //       value: 'runtime',
-    //       short: 'runtime',
-    //     },
-    //   ],
-    // },
-    // router: {
-    //   when: 'vue',
-    //   type: 'confirm',
-    //   message: 'Install vue-router (Only for SPA)?',
-    // },
+    router: {
+      when: 'vue',
+      type: 'confirm',
+      message: 'Install vue-router?',
+    },
     lint: {
       type: 'confirm',
       message: 'Use ESLint to lint your code?',
@@ -106,7 +88,9 @@ module.exports = {
   },
   filters: {
     'Assets/Vue/**/*': 'vue',
-    'src/router/**/*': 'router',
+    'Assets/Scripts/store.js': 'vuex',
+    'Assets/Scripts/router.js': 'router',
+    'Assets/Vue/Views/**/*': 'router',
     '.eslintrc.js': 'lint',
     '.eslintignore': 'lint',
     'config/test.env.js': 'unit || e2e',

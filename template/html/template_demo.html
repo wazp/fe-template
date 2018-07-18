@@ -21,6 +21,11 @@
             <div class="Grid-cell u-xsm-sizeFull u-md-size1of2"><testondemand></testondemand></div>
         </div>
         {{/vue}}
+        {{#router}}
+        <div class="Grid">
+            <div class="Grid-cell"><router-view></router-view></div>
+        </div>
+        {{/router}}
     </div>
     <script src="../Assets/bundled/main.bundle.js"></script>
 </body>

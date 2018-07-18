@@ -116,6 +116,9 @@ module.exports = {
             'vue': 'vue/dist/vue.js',
             '@Components': path.resolve(__dirname, 'Assets/vue/components'),
             {{/vue}}
+            {{#router}}
+            '@Vues': path.resolve(__dirname, 'Assets/Vue/Views'),
+            {{/router}}
             '@': path.join(__dirname, 'Assets'),
             '@Views': path.resolve(__dirname, 'Views'),
         },
