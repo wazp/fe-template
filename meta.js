@@ -55,10 +55,10 @@ module.exports = {
       type: 'confirm',
       message: 'Use ESLint to lint your code?',
     },
-    // unit: {
-    //   type: 'confirm',
-    //   message: 'Set up unit tests with Jest?',
-    // },
+    unit: {
+      type: 'confirm',
+      message: 'Set up unit tests with Jest?',
+    },
     // e2e: {
     //   type: 'confirm',
     //   message: 'Setup e2e tests with crossbrowsertesting.com?',
@@ -90,13 +90,11 @@ module.exports = {
     'Assets/Vue/**/*': 'vue',
     'Assets/Scripts/store.js': 'vuex',
     'Assets/Scripts/router.js': 'router',
-    'Assets/Vue/Views/**/*': 'router',
+    'Assets/Vue/Views/**/*': 'router', // install "Views" if we have Vue-router
     '.eslintrc.js': 'lint',
     '.eslintignore': 'lint',
-    'config/test.env.js': 'unit || e2e',
-    'test/unit/**/*': 'unit',
-    'test/unit/jest.conf.js': "unit",
-    'test/unit/setup.js': "unit",
+    'test/unit/**/*': 'unit', // jest config and example spec
+    'Assets/Scripts/custom/utils.js': 'unit', // jest example js file to test against
     'test/e2e/**/*': 'e2e'
   },
   complete: function(data, { chalk }) {

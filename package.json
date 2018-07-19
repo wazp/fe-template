@@ -6,7 +6,8 @@
   "description": "Vue-cli template based on a mix of Webpack-simple and Webpack",
   "scripts": {
     "build": "vue init . test-template",
-    "clean": "rm -rf ./test-template"
+    "clean": "rm -rf ./test-template",
+    "rebuild": "rm -rf ./test-template && vue init . test-template"
   },
   "devDependencies": {
     "vue-cli": "^2.8.1"
