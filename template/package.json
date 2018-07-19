@@ -13,7 +13,7 @@
     "lint:fix": "npm run lint -- --fix",
     {{/lint}}
     {{#unit}}
-    "unit": "jest --config test/unit/jest.conf.js --coverage",
+    "unit": "jest --config test/unit/jest.conf.js --coverage --verbose",
     {{/unit}}
     "build": "cross-env NODE_ENV=production webpack"
   },
