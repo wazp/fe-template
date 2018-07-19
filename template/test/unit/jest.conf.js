@@ -21,7 +21,7 @@ module.exports = {
     setupFiles: ['<rootDir>/test/unit/setup'],
     coverageDirectory: '<rootDir>/test/unit/coverage',
     collectCoverageFrom: [
-        'Assets/Scripts/**/*.{js,vue}', // change to just Asset later to test vue as well
+        'Assets/**/*.{js,vue}',
         '!Assets/Scripts/*.js',
         '!**/node_modules/**'
     ]

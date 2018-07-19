@@ -95,6 +95,7 @@ module.exports = {
     '.eslintignore': 'lint',
     'test/unit/**/*': 'unit', // jest config and example spec
     'Assets/Scripts/custom/utils.js': 'unit', // jest example js file to test against
+    'Assets/**/*.test.js': 'unit', // only copy tests if unit is true
     'test/e2e/**/*': 'e2e'
   },
   complete: function(data, { chalk }) {
