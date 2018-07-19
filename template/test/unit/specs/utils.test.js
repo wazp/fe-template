@@ -1,3 +1,6 @@
+/*
+// Example test for a javascript file.
+*/
 import {sum, square} from '@/Scripts/custom/utils'
 
 test('adds 1 + 2 to equal 3', () => {

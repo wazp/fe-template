@@ -8,7 +8,7 @@ import store from '@/Scripts/store'
 {{#router}}
 import router from '@/Scripts/router'
 {{/router}}
-import test from '@Components/test.vue'
+import first from '@Components/first.vue'
 import './vueImports'
 
 let App = new Vue({ // eslint-disable-line no-unused-vars
@@ -20,7 +20,7 @@ let App = new Vue({ // eslint-disable-line no-unused-vars
     store,
     {{/vuex}}
     components: {
-        test
+        first
     }
 })
 {{/vue}}

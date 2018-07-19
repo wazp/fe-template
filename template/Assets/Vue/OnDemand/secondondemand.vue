@@ -9,7 +9,7 @@
 
 <script>
     export default {
-        name: 'testondemand',
+        name: 'secondondemand',
         {{#vuex}}
         computed: {
             clicked() {
