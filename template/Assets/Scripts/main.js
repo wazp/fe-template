@@ -27,8 +27,9 @@ let App = new Vue({ // eslint-disable-line no-unused-vars
     }
 })
 {{/vue}}
-console.log('main.js done!')
 
 {{#styleguide}}
 stylemarkTest()
 {{/styleguide}}
+
+console.log('main.js done!')
