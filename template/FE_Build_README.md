@@ -80,6 +80,7 @@ Other options include:
 - `test` for unit tests
 - `e2e` to trigger E2E tests with crossbrowsertraining.com
 - `clean` to clean out all the currently compiled files
+- `styleguide` for generating styleguide
 
 ## Development Process
 

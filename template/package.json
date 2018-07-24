@@ -16,7 +16,7 @@
     "unit": "jest --config test/unit/jest.conf.js --coverage --verbose",
     {{/unit}}
     {{#styleguide}}
-    "build-styleguide": "webpack && stylemark -i . -o styleguide -c stylemark.yml",
+    "styleguide": "webpack && stylemark -i . -o styleguide -c stylemark.yml",
     {{/styleguide}}
     "build": "cross-env NODE_ENV=production webpack"
   },
