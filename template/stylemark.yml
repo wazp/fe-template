@@ -1,0 +1,49 @@
+name: {{ name }} Styleguide
+
+excludeDir:
+# - dist
+
+assets:
+- Assets/Styles/Main.less
+
+theme:
+    # logo: assets/brand/logo.png
+
+    # css:
+    # - theme/theme.css
+
+    # js:
+    # - theme/theme.js
+
+    sidebar:
+        background: "#0066FF"
+        textColor: "#fff"
+
+examples:
+    css:
+    - Assets/bundled/main.bundle.css
+
+    js:
+    # - https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js
+    # - Assets/bundled/main.bundle.js
+
+    doctypeTag: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+    htmlTag: <html id="acme">
+    bodyTag: <body class="acme-body">
+
+    headHtml: |
+        <meta name="google-site-verification" content="52cae…">
+        <script>
+            window.disableRouting = true;
+        </script>
+
+    bodyHtml: |
+        <div style="padding: 20px">
+            {html}
+        </div>
+        <script src="/Assets/bundled/main.bundle.js"></script>
+
+order:
+- +Introduction
+- +Installation
+- -Credits

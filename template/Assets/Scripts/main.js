@@ -4,6 +4,9 @@
 import Vue from 'vue'
 {{#vuex}}
 import store from '@/Scripts/store'
+{{#styleguide}}
+import stylemarkTest from '@/Scripts/custom/stylemark-test.js'
+{{/styleguide}}
 {{/vuex}}
 {{#router}}
 import router from '@/Scripts/router'
@@ -25,3 +28,7 @@ let App = new Vue({ // eslint-disable-line no-unused-vars
 })
 {{/vue}}
 console.log('main.js done!')
+
+{{#styleguide}}
+stylemarkTest()
+{{/styleguide}}

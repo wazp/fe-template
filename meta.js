@@ -59,6 +59,10 @@ module.exports = {
       type: 'confirm',
       message: 'Set up unit tests with Jest?',
     },
+    styleguide: {
+      type: 'confirm',
+      message: 'Install Stylemark Styleguide?'
+    },
     // e2e: {
     //   type: 'confirm',
     //   message: 'Setup e2e tests with crossbrowsertesting.com?',
@@ -96,7 +100,9 @@ module.exports = {
     'test/unit/**/*': 'unit', // jest config and example spec
     'Assets/Scripts/custom/utils.js': 'unit', // jest example js file to test against
     'Assets/**/*.test.js': 'unit', // only copy tests if unit is true
-    'test/e2e/**/*': 'e2e'
+    'test/e2e/**/*': 'e2e',
+    'stylemark.yml': 'styleguide', //stylemark styleguide config file
+    'Assets/Scripts/custom/stylemark-test.js': 'styleguide' //stylemark styleguide test js file
   },
   complete: function(data, { chalk }) {
     const green = chalk.green

@@ -15,6 +15,9 @@
     {{#unit}}
     "unit": "jest --config test/unit/jest.conf.js --coverage --verbose",
     {{/unit}}
+    {{#styleguide}}
+    "build-styleguide": "webpack && stylemark -i . -o styleguide -c stylemark.yml",
+    {{/styleguide}}
     "build": "cross-env NODE_ENV=production webpack"
   },
   "dependencies": {
@@ -81,6 +84,9 @@
     "vue-loader": "^13.0.5",
     "vue-template-compiler": "^2.4.4",
     {{/vue}}
+    {{#styleguide}}
+    "stylemark": "^3.0.2",
+    {{/styleguide}}
     "whatwg-fetch": "^2.0.4"
   },
   "-vs-binding": {
