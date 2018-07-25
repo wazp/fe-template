@@ -1,4 +1,4 @@
-
+<!--Styleguide Markdown-->
 ---
 name: Second Component
 category: Vue

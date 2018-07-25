@@ -17,7 +17,7 @@ Click to toggle `is-active` class.
 ```js
 elem.addEventListener('click', function() {
     if (this.classList.contains('is-active')) {
-        this.classList.remove('is-active')    
+        this.classList.remove('is-active')
     } else {
         this.classList.add('is-active')
     }
@@ -32,7 +32,7 @@ export default function () {
 
     elem.addEventListener('click', function() {
         if (this.classList.contains('is-active')) {
-            this.classList.remove('is-active')    
+            this.classList.remove('is-active')
         } else {
             this.classList.add('is-active')
         }

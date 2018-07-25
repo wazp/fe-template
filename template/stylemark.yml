@@ -28,8 +28,8 @@ examples:
     # - Assets/bundled/main.bundle.js
 
     doctypeTag: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-    htmlTag: <html id="acme">
-    bodyTag: <body class="acme-body">
+    htmlTag: <html>
+    bodyTag: <body>
 
     headHtml: |
         <meta name="google-site-verification" content="52cae…">
@@ -38,7 +38,7 @@ examples:
         </script>
 
     bodyHtml: |
-        <div style="padding: 20px">
+        <div id="App" style="padding: 20px">
             {html}
         </div>
         <script src="/Assets/bundled/main.bundle.js"></script>
