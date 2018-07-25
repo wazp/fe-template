@@ -76,8 +76,13 @@ Other options include:
 - `dev` for a development build
 - `build` for a production build
 - `watcher` to start the watcher (you probably don't want this running outside of the NPM Task runner in VS)
-- `lint` for fixing common lint errors
-- `test` for unit tests
+{{#lint}}
+- `lint` to lint your .js{{#vue}}/.vue{{/vue}} files.
+- `lint:fix` to automatically fix common lint mistakes (like no new line etc)
+{{/lint}}
+{{#unit}}
+- `test` to run unit tests with code coverage
+{{/unit}}
 - `e2e` to trigger E2E tests with crossbrowsertraining.com
 - `clean` to clean out all the currently compiled files
 - `styleguide` for generating styleguide

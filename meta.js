@@ -92,9 +92,9 @@ module.exports = {
   },
   filters: {
     'Assets/Vue/**/*': 'vue',
-    'Assets/Scripts/store.js': 'vuex',
-    'Assets/Scripts/router.js': 'router',
-    'Assets/Vue/Views/**/*': 'router', // install "Views" if we have Vue-router
+    'Assets/Scripts/store.js': 'vue && vuex',
+    'Assets/Scripts/router.js': 'vue && router',
+    'Assets/Vue/Views/**/*': 'vue && router', // install "Views" if we have Vue-router
     '.eslintrc.js': 'lint',
     '.eslintignore': 'lint',
     'test/unit/**/*': 'unit', // jest config and example spec
