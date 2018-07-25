@@ -5,7 +5,7 @@ import Vue from 'vue'
 {{#vuex}}
 import store from '@/Scripts/store'
 {{#styleguide}}
-import stylemarkTest from '@/Scripts/custom/stylemark-test.js'
+import stylemarkTest from '@/Scripts/custom/toggle.js'
 {{/styleguide}}
 {{/vuex}}
 {{#router}}
