@@ -1,12 +1,18 @@
 @import "../common/_variables.less";
 @import "../common/_mixins.less";
 
-/*#
+/*
+---
+name: Loading
+category: Components
+---
 
 Display a loading animation to let user know that something is processing in the background.
 
-Examples:
+Types of loaders:
+- Default: Standard button
 
+```loading.html
 <div>
     <span class="Loading Loading--spinning">
         <span class="Loading-icon"></span>
@@ -18,14 +24,14 @@ Examples:
         <span class="Loading-text">Your profile is loading...</span>
     </span>
 
-    <button class="Button" data-module="toggler" data-toggler="contentElement: '.js-loading1'">
-        Start loading
+    <button class="Button ClickTest">
+        Click Me for JS: Start loading
         <span class="Loading Loading--spinning Loading--small Loading--fill u-hidden js-loading1">
             <span class="Loading-icon"></span>
         </span>
     </button>
 </div>
-
+```
 */
 
 @Loading-iconColor: @colorBlue;

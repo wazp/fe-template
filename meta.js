@@ -101,8 +101,9 @@ module.exports = {
     'Assets/Scripts/custom/utils.js': 'unit', // jest example js file to test against
     'Assets/**/*.test.js': 'unit', // only copy tests if unit is true
     'test/e2e/**/*': 'e2e',
-    'stylemark.yml': 'styleguide', //stylemark styleguide config file
-    'Assets/Scripts/custom/stylemark-test.js': 'styleguide' //stylemark styleguide test js file
+    'stylemark.yml': 'styleguide', //styleguide config file
+    'Assets/Scripts/custom/toggle.js': 'styleguide', //styleguide sample js file
+    'Assets/Vue/**/*.md': 'styleguide && vue' //styleguide md docs for vue components
   },
   complete: function(data, { chalk }) {
     const green = chalk.green
