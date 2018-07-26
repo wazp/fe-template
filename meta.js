@@ -61,7 +61,7 @@ module.exports = {
     },
     styleguide: {
       type: 'confirm',
-      message: 'Install Stylemark Styleguide?'
+      message: 'Install Styleguide?'
     },
     // e2e: {
     //   type: 'confirm',
