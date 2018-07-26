@@ -1,4 +1,4 @@
-
+/*
 ---
 name: First Component
 category: Vue
@@ -18,3 +18,4 @@ List of parameters:
 ```vue
 <button @click="buttonClick">Click to count up store variable</button>
 ```
+*/

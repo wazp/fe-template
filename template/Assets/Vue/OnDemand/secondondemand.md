@@ -1,4 +1,4 @@
-
+/*
 ---
 name: Second Component
 category: Vue
@@ -19,3 +19,4 @@ List of parameters:
 ```vue
 <p>Button has been clicked <span v-html="clicked"></span> times.</p>
 ```
+*/
