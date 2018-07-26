@@ -48,8 +48,10 @@ module.exports = {
     },
     output: {
         filename: '[name].bundle.js',
-        publicPath: '../Assets/bundled/', // IMPORTANT! Should be made absolute when not looking at the demos in ./html!
+        publicPath: '/Assets/bundled/',
         path: path.resolve(__dirname, './Assets/bundled'),
+        chunkFilename: process.env.NODE_ENV === 'production' ? '[name].[chunkhash].bundle.js' : '[name].bundle.js'
+
 
     },
     node: {
