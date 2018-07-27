@@ -1,4 +1,6 @@
 ---
+---
+---
 name: Second Component
 category: Vue
 ---

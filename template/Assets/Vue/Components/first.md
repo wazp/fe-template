@@ -1,4 +1,6 @@
 ---
+---
+---
 name: First Component
 category: Vue
 ---
