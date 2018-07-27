@@ -2,3 +2,9 @@
 CSS for the demo template
 */
 
+.logo{
+    width: 100px;
+}
+
+/*For svg logo*/
+.cls-1{fill:#242424;}
