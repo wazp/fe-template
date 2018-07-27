@@ -1,0 +1,77 @@
+/*
+---
+name: Input Group
+category: Forms
+---
+
+Group inputs together with a text label or button.
+
+```inputgroup.html
+<div class="Grid Grid--gutterH">
+    <div class="Grid-cell">
+        <div class="InputGroup u-marginBsm">
+            <button class="InputGroup-addon InputGroup-addon--button Button">Search</button>
+            <input class="InputGroup-input" type="text" placeholder="Enter search term...">
+        </div>
+    </div>
+</div>
+<hr>
+<div class="Grid Grid--gutterH">
+    <div class="Grid-cell">
+        <div class="InputGroup u-marginBsm">
+            <input class="InputGroup-input" type="text" placeholder="Enter search term...">
+            <button class="InputGroup-addon InputGroup-addon--button Button">Search</button>
+        </div>
+    </div>
+</div>
+```
+*/
+
+@import "../common/_variables.less";
+@import "../common/_mixins.less";
+
+@InputGroup-addonBg: lighten(@colorGrey, 8%);
+@InputGroup-border: @colorGrey;
+
+.InputGroup {
+    background: @InputGroup-addonBg;
+    border: 2px solid @colorGrey;
+    border-radius: 4px;
+    display: flex;
+}
+
+.InputGroup-addon {
+    display: inline-block; // ie10 requires i-b to work
+    padding-right: @spaceMedium;
+    padding-left: @spaceMedium;
+    align-self: center;
+}
+
+// 1: uses important because inputs have been styled using attribute selector with higher specificity
+.InputGroup-input {
+    flex: 1 0 auto;
+    border: none !important; // (1) 
+    border-radius: 0 !important; // (1)
+}
+
+.InputGroup-addon--button {
+    align-self: stretch;
+    border: none;
+    border-radius: 0;
+}
+
+.vendor-ie-9, .vendor-ie-8 {
+    .InputGroup {
+        display: table !important;
+        width: 100%;
+    }
+
+    .InputGroup-addon, .InputGroup-input {
+        display: table-cell !important;
+        width: 1%;
+    }
+
+    .InputGroup-input {
+        width: 100%;
+    }
+}

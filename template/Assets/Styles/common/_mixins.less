@@ -1,1 +1,65 @@
-@import "_variables.less";
+@import "./_variables.less";
+
+//Color Option Mixins
+@colors: transparent, @colorWhite, @colorGrey, @colorBlue;
+
+@colorModifiers: noColor, white, grey, blue;
+
+/*
+---
+name: Color
+category: Base
+---
+
+Colors used throughout the site.
+
+Color | HEX | Text Class | Background Class
+--- | --- | --- | ---
+Grey | #cccccc | .u-textColor--grey | .u-bgColor--grey
+White | #ffffff | .u-textColor--white | .u-bgColor--white
+Blue | #0066FF | .u-textColor--blue | .u-bgColor--blue
+
+```color.html
+<p>Background Colors</p>
+<div class="Grid">
+    <div class="Grid-cell u-xsm-size1of6 u-borderAllSides u-paddingAxlg u-textCenter u-bgColor--grey">Grey</div>
+    <div class="Grid-cell u-xsm-size1of6 u-borderAllSides u-paddingAxlg u-textCenter u-bgColor--blue">Blue</div>
+    <div class="Grid-cell u-xsm-size1of6 u-borderAllSides u-paddingAxlg u-textCenter u-bgColor--white">White</div>
+</div>
+<p>Text Colors</p>
+<div class="Grid">
+    <div class="Grid-cell u-xsm-size1of6 u-borderAllSides u-paddingAxlg u-textCenter u-textColor--grey">Grey</div>
+    <div class="Grid-cell u-xsm-size1of6 u-borderAllSides u-paddingAxlg u-textCenter u-textColor--blue">Blue</div>
+    <div class="Grid-cell u-xsm-size1of6 u-borderAllSides u-paddingAxlg u-textCenter u-textColor--white">White</div>
+</div>
+```
+*/
+
+//creates background colors styles with white text
+.backgroundColorOptions (@i: length(@colors)) when (@i > 0) {
+    @color: extract(@colors, @i);
+    @modifier: extract(@colorModifiers, @i);
+
+    &--@{modifier} {
+        background-color: @color !important;
+    }
+    &--@{modifier} when (@i > 3) {
+        color: @colorWhite !important;
+        fill: @colorWhite !important;
+    }
+
+    .backgroundColorOptions((@i - 1));
+}
+
+//creates text/fill colors styles
+.textColorOptions (@i: length(@colors)) when (@i > 0) {
+    @color: extract(@colors, @i);
+    @modifier: extract(@colorModifiers, @i);
+
+    &--@{modifier} {
+        color: @color !important;
+        fill: @color !important;
+    }
+
+    .textColorOptions((@i - 1));
+}

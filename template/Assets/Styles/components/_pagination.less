@@ -1,0 +1,104 @@
+/*
+---
+name: Pagination
+category: Forms
+---
+
+Navigation between large data sets.
+
+```pagination.html
+<ul class="Pagination">
+    <li class="Pagination-item Pagination-item--nav is-disabled"><a href="#prev" class="Pagination-link">Previous</a></li>
+    <li class="Pagination-item is-active"><a href="#" class="Pagination-link">1</a></li>
+    <li class="Pagination-item"><a href="#" class="Pagination-link">2</a></li>
+    <li class="Pagination-item"><a href="#" class="Pagination-link">3</a></li>
+    <li class="Pagination-item Pagination-item--separator">…</li>
+    <li class="Pagination-item"><a href="#" class="Pagination-link">14</a></li>                            
+    <li class="Pagination-item Pagination-item--nav"><a href="#next" class="Pagination-link">Next</a></li>
+</ul>
+<hr>
+<ul class="Pagination u-textCenter">
+    <li class="Pagination-item Pagination-item--nav"><a href="#prev" class="Pagination-link">Previous</a></li>
+    <li class="Pagination-item"><a href="#" class="Pagination-link">1</a></li>
+    <li class="Pagination-item Pagination-item--separator">…</li>
+    <li class="Pagination-item"><a href="#" class="Pagination-link">4</a></li>
+    <li class="Pagination-item is-active"><a href="#" class="Pagination-link">5</a></li>
+    <li class="Pagination-item"><a href="#" class="Pagination-link">6</a></li>
+    <li class="Pagination-item Pagination-item--separator">…</li>
+    <li class="Pagination-item"><a href="#" class="Pagination-link">14</a></li>                            
+    <li class="Pagination-item Pagination-item--nav"><a href="#next" class="Pagination-link">Next</a></li>
+</ul>
+<hr>
+<ul class="Pagination">
+    <li class="Pagination-item Pagination-item--nav"><a href="#prev" class="Pagination-link" title="Previous page"><span class="u-textXLarge">‹</span></a></li>
+    <li class="Pagination-item Pagination-item--text">Page 5/14</li>                        
+    <li class="Pagination-item Pagination-item--nav"><a href="#next" class="Pagination-link" title="Next page"><span class="u-textXLarge">›</span></a></li>
+</ul>
+```
+*/
+
+@import "../common/_variables.less";
+@import "../common/_mixins.less";
+
+@Pagination-activeBgColor: fade(@colorGrey, 50);
+@Pagination-hoverBgColor: @colorBlue;
+@Pagination-separatorColor: lighten(@colorGrey, .5);
+
+.Pagination {
+    list-style: none;
+    padding: 0;
+}
+
+.Pagination-item {
+    display: inline-block;
+
+    &.is-active .Pagination-link {
+        background-color: @Pagination-activeBgColor;
+        cursor: default;
+        font-weight: bold;
+        pointer-events: none;
+    }
+}
+
+.Pagination-item--nav {
+    .Pagination-link {
+        border-color: @colorGrey;
+        padding-right: @spaceMedium;
+        padding-left: @spaceMedium;
+    }
+    
+    &.is-disabled {
+        pointer-events: none;
+        
+        .Pagination-link {
+            border-color: @Pagination-activeBgColor;
+            color: @colorGrey;
+        }
+    }
+}
+
+.Pagination-item--separator {
+    color: @Pagination-separatorColor;
+}
+
+.Pagination-item--text {
+    color: @colorGrey;
+    font-size: @textSmall;
+    padding-right: @spaceSmall;
+    padding-left: @spaceSmall;
+}
+
+.Pagination-link {
+    display: inline-block;
+    padding: @spaceXSmall @spaceSmall;
+    border-radius: 3px;
+    color: inherit;
+    border: 2px solid transparent;
+    
+    &:hover {
+        border-color: @Pagination-hoverBgColor;
+        background-color: @Pagination-hoverBgColor;
+        text-decoration: none;
+        color: #fff;
+    }
+}

@@ -1,12 +1,15 @@
 @import "../common/_variables.less";
 @import "../common/_mixins.less";
 
-/*#
+/*
+---
+name: Radio
+category: Forms
+---
 
 Custom styling for radio buttons. Supports focus and disabled states.
 
-Examples:
-
+```radio.html
 <div>
     <span class="Radio u-marginRsm">
         <input id="rb1" type="radio" name="priority" class="Radio-input">
@@ -19,12 +22,13 @@ Examples:
     </span>
 
     <span class="Radio u-marginRsm">
-        <input id="rb3" type="radio" name="priority" class="Radio-input">
-        <label for="rb3" class="Radio-label">High Priority</label>
+        <input id="rb3" type="radio" name="priority" class="Radio-input" disabled>
+        <label for="rb3" class="Radio-label">High Priority (disabled)</label>
     </span>
 </div>
-
+```
 */
+
 
 @Radio-checkedShadow: inset 0 0 0 .2em #fff;
 

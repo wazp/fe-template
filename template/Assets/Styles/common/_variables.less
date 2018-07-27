@@ -1,31 +1,28 @@
 // Fonts
-@fontFamilyBody: 'Source Sans Pro', sans-serif;
-@fontFamilyHeading: 'rainfallregular', sans-serif;
-@fontFamilyNavigation: 'Oswald', sans-serif;
+@fontFamilyBody: 'Work Sans', 'Arial', 'Helvetica', sans-serif;
+@fontFamilyHeading: 'Work Sans', 'Arial', 'Helvetica', sans-serif;
 @baseFontSize: 16;
 
+@textXSmall: 11px;
+@textSmall: 14px;
+@textMedium: 16px;
+@textLarge: 20px;
+@textXLarge: 24px;
+
 // Colors
-@colorGrey: #F0ECEB;
-@colorDarkGrey: #6C7477;
-@colorDarkGrey2: #444444;
-@colorBlue: #00929e;
-@colorSeaGreen: #19A69D;
-@colorGreen: #77B62A;
-@colorYellow: #FBD80A;
-@colorRed: #C70003;
-@colorBrown: #D1BB8A;
-@colorOrange: #F57D0A;
+@colorGrey: #cccccc;
+@colorBlue: #0066FF;
 @colorWhite: #FFFFFF;
 @colorBlack: #202020;
 @colorText: @colorGrey;
 
 @colorSelection: #f0f0f0; // color for text selection
-@colorFocus: blue;
+@colorFocus: @colorBlue;
 
 @colorActiveText:#fff;
-@colorActiveBackground: #0066FF;
+@colorActiveBackground: @colorBlue;
 
-@linkColor: #A77142; // color for links
+@linkColor: @colorBlue; // color for links
 @linkColorHover: #202020; // hover color for links
 @linkColorAlternate: #202020; // alternative color for links
 @linkColorHoverAlternate: #a77142; // alternate hover color for links
@@ -33,20 +30,13 @@
 @backgroundColor: #fff; // default background color
 
 // Widths and responsive breakpoints
-@widthContainer: 1308px;
+@widthContainer: 1440px;
 
-//iPhone 5
 @widthXSmall: 300px;
-
 @widthSmall: 500px;
-
-//< 640 == mobile view
-//768 == medium tablet view
-//> 768 == desktop view
 @widthMedium: 740px;
 @widthLarge: 769px;
-
-@widthXLarge: 1308px;
+@widthXLarge: 1440px;
 
 @bpXSmall: ~"only screen and (min-width: @{widthXSmall}), print";
 @bpSmall: ~"only screen and (min-width: @{widthSmall}), print";
@@ -61,7 +51,6 @@
 @prefixXLarge: ~"xlg-";
 
 // Grid
-
 @gutterSize: 10px; // needs to be in pixels
 
 // - Space -

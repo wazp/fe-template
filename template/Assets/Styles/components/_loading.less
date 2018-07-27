@@ -9,27 +9,12 @@ category: Components
 
 Display a loading animation to let user know that something is processing in the background.
 
-Types of loaders:
-- Default: Standard button
-
 ```loading.html
 <div>
     <span class="Loading Loading--spinning">
         <span class="Loading-icon"></span>
         <span class="Loading-text">Your profile is loading...</span>
     </span>
-
-    <span class="Loading Loading--dots">
-        <span class="Loading-icon"></span>
-        <span class="Loading-text">Your profile is loading...</span>
-    </span>
-
-    <button class="Button ClickTest">
-        Click Me for JS: Start loading
-        <span class="Loading Loading--spinning Loading--small Loading--fill u-hidden js-loading1">
-            <span class="Loading-icon"></span>
-        </span>
-    </button>
 </div>
 ```
 */
@@ -97,59 +82,11 @@ Types of loaders:
     }
 }
 
-.Loading--dots {
-    .Loading-icon:before,
-    .Loading-icon:after,
-    .Loading-icon {
-        border-radius: 50%;
-        width: @Loading-size;
-        height: @Loading-size;
-        animation-fill-mode: both;
-        animation: circlePulse 1.5s infinite ease-in-out;
-    }
-
-    .Loading-icon {
-        display: inline-block;
-        color: @Loading-iconColor;
-        position: relative;
-        top: -@Loading-size;
-        transform: translateZ(0);
-        animation-delay: -0.16s;
-    }
-
-    .Loading-icon:before {
-        left: -(@Loading-size+.5em);
-        animation-delay: -0.32s;
-    }
-
-    .Loading-icon:after {
-        left: (@Loading-size+.5em);
-    }
-
-    .Loading-icon:before,
-    .Loading-icon:after {
-        content: "";
-        position: absolute;
-        top: 0;
-    }
-}
-
 @keyframes rotate {
     0% {
         transform: rotate(0deg);
     }
     100% {
         transform: rotate(360deg);
-    }
-}
-
-@keyframes circlePulse {
-    0%,
-    80%,
-    100% {
-        box-shadow: 0 @Loading-size 0 -(@Loading-size/2);
-    }
-    40% {
-        box-shadow: 0 @Loading-size 0 0;
     }
 }

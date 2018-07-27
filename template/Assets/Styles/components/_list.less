@@ -1,0 +1,230 @@
+/*
+---
+name: List
+category: Components
+---
+
+Listing content in either horizontal or vertical direction, while supporting all gutter sizes. It is often used in combination with a ``UL/OL`` tag but it is not required.
+
+```list.html
+<div>
+    <b>List:</b>
+    <ul class="List">
+        <li class="List-item">Item 1</li>
+        <li class="List-item">Item 2</li>
+    </ul>
+    <hr>
+    <ul class="List List--horizontal List--bordered">
+        <li class="List-item">Item 1</li>
+        <li class="List-item">Item 2</li>
+        <li class="List-item">Item 3</li>
+    </ul>
+    <hr>
+    <ul class="List List--bordered">
+        <li class="List-item">Item 1</li>
+        <li class="List-item">Item 2</li>
+        <li class="List-item">Item 3</li>
+    </ul>
+    <hr>
+    <ul class="List List--bordered List--horizontal List--center">
+        <li class="List-item"><a href="#">Item 1</a></li>
+        <li class="List-item"><a href="#">Item 2</a></li>
+        <li class="List-item"><a href="#">Item 3</a></li>
+    </ul>
+</div>
+```
+*/
+
+@import "../common/_variables.less";
+@import "../common/_mixins.less";
+
+@List-gutterVerticalDefault: @spaceXSmall;
+@List-gutterHorizontalDefault: @spaceMedium;
+@List-borderColor: @colorGrey;
+@List-stripedColor: lighten(@colorGrey, 10%);
+
+.List {
+    padding-left: 0;
+    list-style: none;
+}
+
+.List-item {
+    padding-top: @List-gutterVerticalDefault/2;
+    padding-bottom: @List-gutterVerticalDefault/2;
+    
+    .List > &:first-child {
+        padding-top: 0;
+    }
+    
+    .List > &:last-child {
+        padding-bottom: 0;
+    }
+}
+
+.List--center {
+    text-align: center;
+}
+
+.List--right {
+    text-align: right;
+}
+
+.List--bordered {
+    & > .List-item {
+        border-bottom: 1px solid @List-borderColor;
+        
+        &:last-child {
+            border-bottom: none;
+        }
+    }
+}
+
+.List--striped {
+    & > .List-item {
+        padding-top: 0;
+        padding-bottom: 0;
+        
+        .List-itemContent {
+            display: block;
+            padding: @List-gutterVerticalDefault/2 @List-gutterHorizontalDefault/2;
+        }
+        
+        &:nth-child(odd) .List-itemContent {
+            background: @List-stripedColor;
+        }
+    }
+}
+
+.List--horizontal {
+    margin-left: -@List-gutterHorizontalDefault/2;
+    margin-right: -@List-gutterHorizontalDefault/2;
+    
+    .List-item {
+        display: inline-block;
+        margin-right: -.25em; // remove inline-block space between elements. this may be inconsistent when changing font-family
+        
+        padding-right: @List-gutterHorizontalDefault/2;
+        padding-left: @List-gutterHorizontalDefault/2;
+        
+        &:last-child {
+            padding-right: 0;
+        }
+    }
+    
+    &.List--bordered {
+        & > .List-item {
+            border-right: 1px solid @List-borderColor;
+            border-bottom: none;
+     
+            &:last-child {
+                border-right: none;
+            }
+        }
+    }
+    
+    &.List--striped {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        
+        & > .List-item {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+}
+
+/* 
+    Vertical gutters (top, bottom) 
+*/
+.List--gutterVz > .List-item {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.List--gutterVxsm > .List-item {
+    padding-top: @spaceXSmall/2;
+    padding-bottom: @spaceXSmall/2;
+}
+
+.List--gutterVsm > .List-item {
+    padding-top: @spaceSmall/2;
+    padding-bottom: @spaceSmall/2;
+}
+
+.List--gutterVmd > .List-item {
+    padding-top: @spaceMedium/2;
+    padding-bottom: @spaceMedium/2;
+}
+
+.List--gutterVlg > .List-item {
+    padding-top: @spaceLarge/2;
+    padding-bottom: @spaceLarge/2;
+}
+
+.List--gutterVxlg > .List-item {
+    padding-top: @spaceXLarge/2;
+    padding-bottom: @spaceXLarge/2;
+}
+
+/* 
+    Horizontal gutters (right, left) 
+*/
+.List--gutterHz {
+    margin-right: 0;
+    margin-left: 0;
+    
+    & > .List-item {
+        padding-right: 0;
+        padding-left: 0;
+    }
+}
+
+.List--gutterHxsm {
+    margin-right: -@spaceXSmall/2;
+    margin-left: -@spaceXSmall/2;
+    
+    & > .List-item {
+        padding-right: @spaceXSmall/2;
+        padding-left: @spaceXSmall/2;
+    }
+}
+
+.List--gutterHsm {
+    margin-right: -@spaceSmall/2;
+    margin-left: -@spaceSmall/2;
+    
+    & > .List-item {
+        padding-right: @spaceSmall/2;
+        padding-left: @spaceSmall/2;
+    }
+}
+
+.List--gutterHmd {
+    margin-right: -@spaceMedium/2;
+    margin-left: -@spaceMedium/2;
+    
+    & > .List-item {
+        padding-right: @spaceMedium/2;
+        padding-left: @spaceMedium/2;
+    }
+}
+
+.List--gutterHlg {
+    margin-right: -@spaceLarge/2;
+    margin-left: -@spaceLarge/2;
+    
+    & > .List-item {
+        padding-right: @spaceLarge/2;
+        padding-left: @spaceLarge/2;
+    }
+}
+
+.List--gutterHxlg {
+    margin-right: -@spaceXLarge/2;
+    margin-left: -@spaceXLarge/2;
+    
+    & > .List-item {
+        padding-right: @spaceXLarge/2;
+        padding-left: @spaceXLarge/2;
+    }
+}

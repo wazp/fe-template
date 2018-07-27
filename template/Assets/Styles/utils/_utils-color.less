@@ -1,6 +1,11 @@
 @import "../common/_variables.less";
 @import "../common/_mixins.less";
 
-.u-colorBg{
-    background: @colorGrey;
+.u-bgColor{
+    .backgroundColorOptions();
+}
+
+//generates different text and fill colors (ex: .u-color--white)
+.u-textColor{
+    .textColorOptions();
 }

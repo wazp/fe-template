@@ -58,10 +58,6 @@
     color: @colorWhite !important;
 }
 
-.u-textOrange {
-    color: @colorOrange !important;
-}
-
 /**
  * Text truncation
  *
@@ -82,33 +78,31 @@
     word-wrap: normal !important; /* 2 */
 }
 
-
 .u-textLight {
     opacity: 0.5;
 }
 
 .u-textXSmall {
-    font-size: 0.75em !important; // 11px
+    font-size: @textXSmall !important;
     letter-spacing: 0.5px;
 }
 
-
 .u-textSmall {
-    font-size: 0.875em !important; // 14px
+    font-size: @textSmall !important;
+}
+
+.u-textMedium {
+    font-size: @textMedium !important;
 }
 
 .u-md-textSmall {
     @media @bpMedium {
-        font-size: 0.875em !important; // 14px
+        font-size: @textSmall !important;
     }
 }
 
 .u-textLarge {
-    font-size: 1.063em !important;  // 17px
-}
-
-.u-textLarger {
-    font-size: 1.250em !important; // 20px
+    font-size: @textLarge !important;
 }
 
 .u-textXLarge {
@@ -144,8 +138,4 @@
 
 .u-textCapitalize {
     text-transform: capitalize;
-}
-
-.u-textOrange {
-    color: #FE5000 !important;
 }

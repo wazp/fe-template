@@ -110,24 +110,14 @@
         display: inline-block;
         width: 8px;
         height: 8px;
-        border: solid @colorOrange;
+        border: solid #ccc;
         border-width: 0 2px 2px 0;
-        -moz-transform: rotate(-45deg);
-        -ms-transform: rotate(-45deg);
-        -o-transform: rotate(-45deg);
-        -webkit-transform: rotate(-45deg);
         transform: rotate(-45deg);
         position: absolute;
         margin-top: 9px;
         margin-left: 0.25rem;
         vertical-align: middle;
         transition: all 0.25s;
-
-        h3 & {
-            width: 10px;
-            height: 10px;
-            margin-top: 20px;
-        }
     }
 
     &--white {
@@ -139,42 +129,6 @@
 
         &:after {
             border-color: @colorWhite;
-        }
-    }
-
-    h1 &,
-    h2 &,
-    h3 &,
-    .Heading--1 &,
-    .Heading--2 &,
-    .Heading--3 & {
-        &:after {
-            margin-top: 9px;
-
-            .Nav-content & {
-                margin-top: 0;
-                top: 50%;
-                transform: translateY(-50%) rotate(-45deg);
-            }
-
-            @media @bpMedium {
-                margin-top: 18px;
-            }
-        }
-    }
-
-    h4 &,
-    h5 &,
-    h6 &,
-    .Heading--4 &,
-    .Heading--5 &,
-    .Heading--6 & {
-        &:after {
-            margin-top: 6px;
-
-            @media @bpMedium {
-                margin-top: 12px;
-            }
         }
     }
 
@@ -193,7 +147,7 @@
 
     &:after {
         content: '→';
-        color: @colorOrange;
+        color: #ccc;
         font-size: 2rem;
         line-height: 0.5;
         margin-left: 1rem;

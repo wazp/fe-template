@@ -4,6 +4,8 @@
 /* Layout
    ========================================================================== */
 
+
+   
 *, *:before, *:after {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -95,8 +97,7 @@ input[type=tel],
 input[type=email],
 input[type=url],
 input[type=date],
-textarea,
-select
+textarea    
 {
     border: 2px solid @colorGrey;
     padding: .6em 1.2em;
@@ -119,13 +120,12 @@ input[type=search] {
         box-shadow: 0 0 3px 0 @colorFocus;
     }
 }
-select {
-	padding: .5em 1.5em .5em 1em;
-}
 textarea {
     padding: .5em;
     font-size: 1em;
     border: 1px solid @colorGrey;
+    height: 5.8em; // three rows of text
+    resize: vertical;
 
     &:focus {
         outline: none;
@@ -134,13 +134,7 @@ textarea {
 }
 
 label {
-    margin-bottom:0.5em;
-}
-
-/* Validation */
-
-.field-validation-valid.Status {
-    display: none;
+    display: inline-block;
 }
 
 /* ==========================================================================
