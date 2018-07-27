@@ -44,6 +44,7 @@ examples:
         <script src="/Assets/bundled/main.bundle.js"></script>
 
 order:
-- +Introduction
-- +Installation
-- -Credits
+- +Grid
+- +Components
+- +Vue
+- -Javascript
