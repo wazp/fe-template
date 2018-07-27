@@ -58,20 +58,19 @@
     {{/unit}}
     {{#lint}}
     "babel-eslint": "^8.2.6",
-    "eslint": "^4.19.1",
+    "eslint": "^5.2.0",
     "eslint-config-standard": "^11.0.0",
     "eslint-friendly-formatter": "^4.0.1",
     "eslint-loader": "^2.0.0",
     "eslint-plugin-html": "^4.0.5",
     "eslint-plugin-import": "^2.12.0",
-    "eslint-plugin-node": "^6.0.1",
+    "eslint-plugin-node": "^7.0.1",
     "eslint-plugin-promise": "^3.8.0",
     "eslint-plugin-standard": "^3.1.0",
     {{/lint}}
     "cross-env": "^5.0.5",
-    "css-loader": "^0.28.7",
-    "webpack": "^3.6.0",
-    "css-mqpacker": "^6.0.2",
+    "css-loader": "^1.0.0",
+    "css-mqpacker": "^7.0.0",
     "cssnano": "^4.0.0",
     "extract-text-webpack-plugin": "^3.0.2",
     "import-glob-loader": "^1.1.0",
@@ -82,12 +81,14 @@
     "postcss-loader": "^2.1.6",
     "postcss-pxtorem": "^4.0.1",
     {{#vue}}
-    "vue-loader": "^13.0.5",
+    "vue-loader": "^15.2.6",
     "vue-template-compiler": "^2.4.4",
     {{/vue}}
     {{#styleguide}}
     "stylemark": "^3.0.2",
     {{/styleguide}}
+    "webpack": "^4.16.3",
+    "webpack-cli": "^3.1.0",
     "whatwg-fetch": "^2.0.4"
   },
   "-vs-binding": {
