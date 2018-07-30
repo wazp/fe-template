@@ -57,7 +57,7 @@ TODOS:
   - [ ] Carousel
   - [ ] Tabs
   - [ ] Accordions
-  - [ ] Modals
+  - [x] Modals - Carla (in progress)
   - ... etc
 - [ ] List of HTML/CSS components we could use:
   - [ ] Main Menu Dropdowns
