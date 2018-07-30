@@ -1,6 +1,22 @@
 # US FE template
 
-Vue-CLI template for Chicago Office FE.
+## While developing the actual template;
+Clone this repo. To build the example template, do:
+```bash
+$ npm run build
+```
+
+This will build the template into sub folder `test-template`, just like if you were an end user of the template system.
+
+Do your changes in this folder to test, and then move the configuration back into the template folder. Don't forget to add questions etc to meta.js when needed, and conditionals in all files if it should be installed or not depending on user choice.
+
+Other scripts you can use in packages.json include;
+- npm run clean - to remove the test-template directory
+- npm run rebuild - to clean and then build the template, starting you from scratch again.
+
+Do **NOT** do any `npm install`s in either the root, nor template. Only in the `test-template` directory!
+
+## Vue-CLI template for Chicago Office FE.
 
 Do not clone this repo, it's just the template. To actually install a new site, use:
 
