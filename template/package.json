@@ -16,7 +16,7 @@
     "unit": "jest --config test/unit/jest.conf.js --coverage --verbose",
     {{/unit}}
     {{#styleguide}}
-    "styleguide": "webpack && stylemark -i . -o styleguide -c stylemark.yml",
+    "styleguide": "cross-env NODE_ENV=development webpack && stylemark -i . -o styleguide -c stylemark.yml",
     {{/styleguide}}
     "build": "cross-env NODE_ENV=production webpack"
   },
@@ -34,17 +34,18 @@
     "not ie <= 10"
   ],
   "devDependencies": {
+    "autoprefixer": "^9.0.1",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
     "babel-helper-vue-jsx-merge-props": "^2.0.3",
     "babel-plugin-syntax-dynamic-import": "^6.18.0",
     "babel-plugin-syntax-jsx": "^6.18.0",
     "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
-    "babel-plugin-transform-runtime": "^6.23.0",
     "babel-plugin-transform-vue-jsx": "^3.7.0",
     "babel-polyfill": "^6.26.0",
     "babel-preset-env": "^1.6.0",
     "babel-preset-stage-3": "^6.24.1",
+    "clean-webpack-plugin": "^0.1.19",
     {{#unit}}
     "babel-jest": "^23.4.0",
     "babel-plugin-dynamic-import-node": "^2.0.0",
@@ -68,11 +69,12 @@
     "eslint-plugin-promise": "^3.8.0",
     "eslint-plugin-standard": "^3.1.0",
     {{/lint}}
+    "mini-css-extract-plugin": "^0.4.1",
+    "uglifyjs-webpack-plugin": "^1.2.7",
     "cross-env": "^5.0.5",
     "css-loader": "^1.0.0",
     "css-mqpacker": "^7.0.0",
     "cssnano": "^4.0.0",
-    "extract-text-webpack-plugin": "^3.0.2",
     "import-glob-loader": "^1.1.0",
     "less": "^3.6.0",
     "less-loader": "^4.1.0",
