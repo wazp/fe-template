@@ -66,3 +66,4 @@ TODOS:
   - ... etc
 - [x] Create static demo HTML page we could use to show what the grid/components look like: (./html/template_demo.html)
   - [ ] Add style to it
+- [ ] Add toaster notification so devs can see when webpack finishes compiling. 
