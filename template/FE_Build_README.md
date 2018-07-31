@@ -74,7 +74,9 @@ If you want to manually trigger a build, you can do so from the Task Runner Expl
 >*TODO: Update this later on to include the correct stuff!*
 Other options include:
 - `dev` for a development build
+- `dev:stats` to generate html report of bundle size for development builds
 - `build` for a production build
+- `build:stats` to generate html report of bundle size for production builds
 - `watcher` to start the watcher (you probably don't want this running outside of the NPM Task runner in VS)
 {{#lint}}
 - `lint` to lint your .js{{#vue}}/.vue{{/vue}} files.
