@@ -54,7 +54,7 @@ TODOS:
 - [ ] Setup E2E tests with CrossBrowserTesting.com - Patrick
 - [ ] Create Readme Markdown files with examples of various things we use.
 - [ ] List of reusable Vue components we could use:
-  - [ ] Carousel
+  - [x] Carousel - Joe G (in progress)
   - [ ] Tabs
   - [ ] Accordions
   - [x] Modals - Carla (in progress)
@@ -66,4 +66,5 @@ TODOS:
   - ... etc
 - [x] Create static demo HTML page we could use to show what the grid/components look like: (./html/template_demo.html)
   - [ ] Add style to it
+  - [x] Add WCAG 2.0 compliant snippets for common use cases.
 - [ ] Add toaster notification so devs can see when webpack finishes compiling. 
