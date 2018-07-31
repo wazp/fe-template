@@ -4,7 +4,7 @@
 /* Layout
    ========================================================================== */
 
-
+@import (css) url("//fonts.googleapis.com/css?family=Work+Sans:400,700");
    
 *, *:before, *:after {
     -moz-box-sizing: border-box;
@@ -24,6 +24,7 @@ body{
 	background-color: #fff;
 	margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
 
 main[role=main]{
@@ -33,6 +34,16 @@ main[role=main]{
 ::selection, ::-moz-selection {
     background: @colorSelection;
     text-shadow: none;
+}
+
+.ContainerWidth {
+    max-width: @containerWidth !important;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.ContentWidth {
+    padding: @contentWidth !important;
 }
 
 /* Elements
