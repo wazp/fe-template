@@ -17,7 +17,7 @@
     "unit": "jest --config test/unit/jest.conf.js --coverage --verbose",
     {{/unit}}
     {{#styleguide}}
-    "styleguide": "cross-env NODE_ENV=development webpack && stylemark -i . -o styleguide -c stylemark.yml",
+    "styleguide": "cross-env NODE_ENV=production webpack && stylemark -i . -o styleguide -c stylemark.yml",
     {{/styleguide}}
     "build": "cross-env NODE_ENV=production webpack",
     "build:stats": "cross-env NODE_ENV=production webpack --devtool source-map && source-map-explorer ./Assets/Bundled/main.bundle.js"
