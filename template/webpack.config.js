@@ -46,8 +46,8 @@ module.exports = {
     mode: process.env.NODE_ENV,
     entry: {
         main: [
-            'babel-polyfill',
-            'whatwg-fetch',
+            // 'babel-polyfill', NOT USED ANYMORE. Be more granular in /Assets/Scripts/es6.polyfills.js instead!
+            // 'whatwg-fetch', Also moved to es6.polyfills.js!
             './Assets/Scripts/Main.js',
             './Assets/Styles/Main.less'
         ]
@@ -57,8 +57,6 @@ module.exports = {
         publicPath: '/Assets/bundled/',
         path: path.resolve(__dirname, './Assets/bundled'),
         chunkFilename: process.env.NODE_ENV === 'production' ? '[name].[chunkhash].bundle.js' : '[name].bundle.js'
-
-
     },
     node: {
         fs: "empty"
@@ -66,6 +64,7 @@ module.exports = {
     optimization: {
         minimizer: [
             new uglifyJsPlugin({
+                sourceMap: true,
                 uglifyOptions: {
                     mangle: true,
                     compress: {
@@ -189,8 +188,5 @@ module.exports = {
         },
         extensions: ['*', '.js', {{#vue}}'.vue',{{/vue}} '.json']
     },
-    // performance: {
-    //     hints: false
-    // },
     devtool: process.env.NODE_ENV === 'production' ? false : 'source-map'
 }

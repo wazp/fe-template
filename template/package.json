@@ -8,6 +8,7 @@
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack",
     "dev:watch": "cross-env NODE_ENV=development webpack -w",
+    "dev:stats": "cross-env NODE_ENV=development webpack && source-map-explorer ./Assets/Bundled/main.bundle.js",
     {{#lint}}
     "lint": "eslint --ext .js,.vue assets",
     "lint:fix": "npm run lint -- --fix",
@@ -18,7 +19,8 @@
     {{#styleguide}}
     "styleguide": "cross-env NODE_ENV=development webpack && stylemark -i . -o styleguide -c stylemark.yml",
     {{/styleguide}}
-    "build": "cross-env NODE_ENV=production webpack"
+    "build": "cross-env NODE_ENV=production webpack",
+    "build:stats": "cross-env NODE_ENV=production webpack --devtool source-map && source-map-explorer ./Assets/Bundled/main.bundle.js"
   },
   "dependencies": {
     {{#vue}}
@@ -89,6 +91,7 @@
     {{#styleguide}}
     "stylemark": "^3.0.2",
     {{/styleguide}}
+    "source-map-explorer": "^1.5.0",
     "webpack": "^4.16.3",
     "webpack-cli": "^3.1.0",
     "whatwg-fetch": "^2.0.4"
