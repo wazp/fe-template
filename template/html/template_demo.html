@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Template Demo</title>
-
     <link rel="apple-touch-icon-precomposed" sizes="57x57" href="../Assets/favicons/apple-touch-icon-57x57.png" />
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../Assets/favicons/apple-touch-icon-114x114.png" />
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../Assets/favicons/apple-touch-icon-72x72.png" />
@@ -19,7 +19,7 @@
     <link rel="icon" type="image/png" href="../Assets/favicons/favicon-32x32.png" sizes="32x32" />
     <link rel="icon" type="image/png" href="../Assets/favicons/favicon-16x16.png" sizes="16x16" />
     <link rel="icon" type="image/png" href="../Assets/favicons/favicon-128.png" sizes="128x128" />
-    <meta name="application-name" content="&nbsp;"/>
+    <meta name="application-name" content="&nbsp;" />
     <meta name="msapplication-TileColor" content="#FFFFFF" />
     <meta name="msapplication-TileImage" content="mstile-144x144.png" />
     <meta name="msapplication-square70x70logo" content="../Assets/favicons/mstile-70x70.png" />
@@ -29,207 +29,260 @@
     <link rel="stylesheet" href="../Assets/bundled/main.bundle.css">
     <link rel="stylesheet" href="demo.css">
 </head>
+
 <body>
-    <div id="App">
+    <div class="Grid" id="App">
 
-        <a class="skip-link u-hiddenVisually" href="#main">Skip to main</a><!--Level A 2.4.1 - Bypass Blocks: Skip Link to main content-->
+        <div class="Grid-cell">
 
-        <header>
-            <div class="Grid">
-                <div class="Grid-cell u-md-size3of4">
+            <a class="skip-link u-hiddenVisually" href="#main">Skip to main</a>
+            <!--Level A 2.4.1 - Bypass Blocks: Skip Link to main content-->
 
-                    <div class="Grid">
-                        <div class="Grid-cell">
-                            <a href="/">
-                                <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 724.2 316.05" class="logo">
-                                    <title>Making Waves logo</title>
-                                    <polygon class="cls-1" points="160.47 313.97 251.61 313.97 106.18 2.09 60.61 99.82 160.47 313.97"/><polygon class="cls-1" points="312.98 313.97 404.13 313.97 258.7 2.09 213.13 99.82 312.98 313.97"/><path class="cls-1" d="M102.18,415.81c-21.55,0-39.09,17.27-39.09,38.5s17.54,38.51,39.09,38.51,39.09-17.27,39.09-38.51S123.74,415.81,102.18,415.81Z" transform="translate(-63.09 -176.76)"/><polygon class="cls-1" points="472.59 2.09 618.02 313.97 663.59 216.23 563.73 2.09 472.59 2.09"/><polygon class="cls-1" points="320.07 2.09 465.5 313.97 511.07 216.23 411.22 2.09 320.07 2.09"/><path class="cls-1" d="M748.21,176.76c-21.55,0-39.09,17.27-39.09,38.51s17.54,38.5,39.09,38.5,39.09-17.27,39.09-38.5S769.76,176.76,748.21,176.76Z" transform="translate(-63.09 -176.76)"/>
-                                </svg>
-                            </a>
+            <header class="SiteHeader ContentWidth">
+                <div>
+                    <div class="Grid Grid--hasContainerWidth Grid--withExtraWideGutter">
+                        <div class="Grid-cell u-md-size2of4">
+
+                            <div class="Grid">
+                                <div class="Grid-cell">
+                                    <a href="/">
+                                        <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 724.2 316.05" class="logo">
+                                            <title>Making Waves logo</title>
+                                            <polygon class="cls-1" points="160.47 313.97 251.61 313.97 106.18 2.09 60.61 99.82 160.47 313.97" />
+                                            <polygon class="cls-1" points="312.98 313.97 404.13 313.97 258.7 2.09 213.13 99.82 312.98 313.97" />
+                                            <path class="cls-1" d="M102.18,415.81c-21.55,0-39.09,17.27-39.09,38.5s17.54,38.51,39.09,38.51,39.09-17.27,39.09-38.51S123.74,415.81,102.18,415.81Z"
+                                                transform="translate(-63.09 -176.76)" />
+                                            <polygon class="cls-1" points="472.59 2.09 618.02 313.97 663.59 216.23 563.73 2.09 472.59 2.09" />
+                                            <polygon class="cls-1" points="320.07 2.09 465.5 313.97 511.07 216.23 411.22 2.09 320.07 2.09" />
+                                            <path class="cls-1" d="M748.21,176.76c-21.55,0-39.09,17.27-39.09,38.51s17.54,38.5,39.09,38.5,39.09-17.27,39.09-38.5S769.76,176.76,748.21,176.76Z"
+                                                transform="translate(-63.09 -176.76)" />
+                                        </svg>
+                                    </a>
+                                </div>
+                                <div class="Grid-cell">
+                                    <nav aria-label="site">
+                                        <!--1.3.1 - Info and Relationships - Convert to Unordered Lists to make it easier to navigate for screen readers-->
+                                        <ul class="List List--horizontal List--bordered">
+                                            <li class="List-item">
+                                                <a href="#" title="Home">Home</a>
+                                            </li>
+                                            <li class="List-item">
+                                                <a href="#" title="About">About</a>
+                                            </li>
+                                            <li class="List-item">
+                                                <a href="#" title="Contact">Contact</a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
                         </div>
-                        <div class="Grid-cell">
-                            <nav aria-label="site">
-                                <!--1.3.1 - Info and Relationships - Convert to Unordered Lists to make it easier to navigate for screen readers-->
-                                <ul class="List List--horizontal List--bordered">
-                                    <li class="List-item"><a href="#" title="Home">Home</a></li>
-                                    <li class="List-item"><a href="#" title="About">About</a></li>
-                                    <li class="List-item"><a href="#" title="Contact">Contact</a></li>
-                                </ul>
-                            </nav>
+                        <div class="Grid-cell u-md-size2of4">
+                            <div class="Grid Grid--gutterH">
+                                <div class="Grid-cell">
+                                    <form action="/search" method="POST" role="search">
+                                        <!--"search" is a landmark role making it easy for screen readers.-->
+                                        <div class="InputGroup u-marginBsm">
+                                            <label for="query" class="u-hiddenVisually">Search</label>
+                                            <input type="search" id="query" name="search" class="InputGroup-input" placeholder="Enter search term...">
+                                            <!--Level AA 2.4.5 - Muliple Ways: Provide more than one way to locate a page on the site. Either via Search or a Sitemap.-->
+                                            <button class="InputGroup-addon InputGroup-addon--button Button">Search</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
                         </div>
-
                     </div>
                 </div>
-                <div class="Grid-cell u-md-size1of4">
-                    <div class="Grid Grid--gutterH">
-                        <div class="Grid-cell">
-                            <form action="/search" method="POST" role="search"><!--"search" is a landmark role making it easy for screen readers.-->
-                                <div class="InputGroup u-marginBsm">
-                                    <label for="query" class="u-hiddenVisually">Search</label>
-                                    <input type="search" id="query" name="search" class="InputGroup-input" placeholder="Enter search term..."><!--Level AA 2.4.5 - Muliple Ways: Provide more than one way to locate a page on the site. Either via Search or a Sitemap.-->
-                                    <button class="InputGroup-addon InputGroup-addon--button Button">Search</button>
-                                </div>                            
-                            </form>                    
+            </header>
+
+            <div class="Hero">
+                <img src="img/waves.jpg" alt="water waves" class="hero-image u-sizeFull" />
+            </div>
+
+            <div class="ContentWidth">
+                <div class="Grid Grid--hasContainerWidth Grid--withExtraWideGutter ">
+                    <main id="main" tabindex="-1" class="Grid-cell u-md-size3of4">
+
+                        <div class="Grid ">
+                            <div class="Grid-cell">
+
+                                <!--Level A 2.4.1 - Bypass Blocks: Skip Link-->
+                                <h1>Lorem ipsum</h1>
+                                <p>Aliquam viverra leo et ex sagittis, aliquet suscipit mauris convallis. Proin aliquam quam
+                                    sed libero efficitur ultricies. In vulputate tellus tortor, eget semper libero imperdiet
+                                    ut. Aliquam hendrerit lectus ac magna pretium, id rhoncus tellus porta. Nunc varius sodales
+                                    congue.</p>
+                                <ol>
+                                    <li>Sed viverra</li>
+                                    <li>Risus in dapibus congue</li>
+                                </ol>
+
+                                <h2>Pricing</h2>
+                                <table>
+                                    <caption>List of products</caption>
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Product</th>
+                                            <th scope="col">Description</th>
+                                            <th scope="col">Cost</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">Lorem ipsem</th>
+                                            <td>Proin a elit dignissim</td>
+                                            <td>$199/yr</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Commodo justo ut</th>
+                                            <td>Sed quis leo nec risus gravida blandit vel vitae tellus</td>
+                                            <td>$399/yr</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Sed cursus nec enim</th>
+                                            <td>Nunc dui mi, blandit ac nunc rutrum</td>
+                                            <td>$400/yr</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                                <h2>FAQ</h2>
+                                <dl>
+                                    <dt>
+                                        Ut consectetur, urna eget pharetra posuere
+                                    </dt>
+                                    <dd>
+                                        Nam sollicitudin vel diam non fermentum
+                                        <a href="#">Read More
+                                            <span class="visuallyHidden"> about all of our services</span>
+                                        </a>
+                                    </dd>
+                                    <dt>Nulla egestas, sapien in rutrum pharetra, justo libero dapibus orci?</dt>
+                                    <dd>
+                                        Fusce bibendum, elit et facilisis molestie, neque libero pretium mi, vel congue mi orci ac massa.
+                                        <a href="#">Read More
+                                            <span class="visuallyHidden"> about our compression</span>
+                                        </a>
+                                    </dd>
+                                </dl>
+                            </div>
                         </div>
+                    </main>
+
+                    <aside class="Grid-cell u-md-size1of4">
+                        <nav aria-label="page">
+                            <ol>
+                                <li>
+                                    <a href="#" title="View Case Studies">View Case Studies</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Our Approach">Our Approach</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="News">News</a>
+                                </li>
+                            </ol>
+                        </nav>
+
+                        <form id="contact" action="/contact" method="POST" novalidate="">
+                            <fieldset>
+                                <legend>Contact</legend>
+
+                                <label for="name">
+                                    Name (Required):
+                                    <span class="error-message visuallyHidden">Name cannot be empty</span>
+                                    <!--display none by default-->
+                                </label>
+                                <input id="name" type="text" name="name" required="" aria-invalid="true">
+
+                                <label for="email" aria-live="assertive">
+                                    <!--to validate on blur-->
+                                    Email (Required):
+                                    <span class="error-message visuallyHidden">Name cannot be empty</span>
+                                </label>
+                                <input id="email" type="email" name="email" required="">
+
+                                <label for="phone">Phone (Required):</label>
+                                <input id="phone" type="tel" name="phone" required="">
+                            </fieldset>
+
+                            <fieldset>
+                                <legend>Contact Phone Number</legend>
+                                <!--Legend is announced after every focused element for a screen reader-->
+                                <label>
+                                    <input type="radio" name="home"> Home</label>
+                                <label>
+                                    <input type="radio" name="work"> Work</label>
+                                <label>
+                                    <input type="radio" name="cell"> Cell</label>
+                            </fieldset>
+                            <button>Submit</button>
+                        </form>
+
+                    </aside>
+                </div>
+
+            </div>
+
+            <div class="ContentWidth ContainerWidth">
+                <div class="Grid Grid--withGutter">
+                    <div class="Grid-cell u-xsm-sizeFull u-md-size1of2">
+                        <first></first>
+                    </div>
+                    <div class="Grid-cell u-xsm-sizeFull u-md-size1of2">
+                        <secondondemand></secondondemand>
+                    </div>
+                </div>
+
+                <div class="Grid">
+                    <div class="Grid-cell">
+                        <router-view></router-view>
                     </div>
                 </div>
             </div>
-        </header>
 
-        <div class="Grid">
-            <div class="Grid-cell">
+            <footer class="SiteFooter">
+                <div class="Grid Grid--hasContainerWidth ContentWidth">
+                    <div class="Grid-cell">
+                        <nav aria-label="site">
+                            <ul class="List List--horizontal List--bordered">
+                                <li class="List-item">
+                                    <a href="#" title="Home">Home</a>
+                                </li>
+                                <li class="List-item">
+                                    <a href="#" title="About">About</a>
+                                </li>
+                                <li class="List-item">
+                                    <a href="#" title="Contact">Contact</a>
+                                </li>
+                                <li class="List-item">
+                                    <a href="#" title="View Case Studies">View Case Studies</a>
+                                </li>
+                                <li class="List-item">
+                                    <a href="#" title="Our Approach">Our Approach</a>
+                                </li>
+                                <li class="List-item">
+                                    <a href="#" title="News">News</a>
+                                </li>
+                                <li class="List-item">
+                                    <a href="sitemap.html" title="Sitemap">Sitemap</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="Grid-cell">
+                        <p>Lorem Ipsum Company
+                            <br>123 Main Street, Suite 700
+                            <br>Chicago, Illinois 60654</p>
+                    </div>
+                </div>
+            </footer>
 
-            
-                <img src="#" alt="Staff members of Pied Piper" class="hero-image"><!--hero image-->
-                <main id="main" tabindex="-1"><!--Level A 2.4.1 - Bypass Blocks: Skip Link-->
-                    <h1>Pied Piper Technology</h1>
-                    <p>Pied Piper takes all your files and makes them smaller!</p>
-                    <p>Compress and Sync:</p>
-                    <ol>
-                        <li>All Your Devices</li>
-                        <li>All Your Files</li>
-                    </ol>
-    
-                    <h2>Pricing</h2>
-                    <table>
-                        <caption>List of products</caption>
-                        <thead>
-                            <tr>
-                                <th scope="col">Product</th>
-                                <th scope="col">Description</th>
-                                <th scope="col">Cost</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <th scope="row">Basic Compression</th>
-                                <td>Compress up to 1GB of Data</td>
-                                <td>$199/yr</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">Advanced Compression</th>
-                                <td>Compress up to 5GB of Data</td>
-                                <td>$399/yr</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">Not yo moma's Compression</th>
-                                <td>Compress all the things!</td>
-                                <td>$400/yr</td>
-                            </tr>
-                        </tbody>
-                    </table>
-    
-                    <h2>FAQ</h2>
-                    <dl>
-                        <dt>
-                            What is Pied Piper?</dt>
-                        <dd>
-                            A Middle-Out Compression Solution Making Data Storage Problems Smaller.
-                            <a href="#">Read More <span class="visuallyHidden"> about all of our services</span></a>
-                        </dd>
-                        <dt>How do we do it?</dt>
-                        <dd>
-                            Using our revolutionary middle-out algorithm, we find long-range structure in your files to create the most efficient encoding of your data. It's just as exciting as it sounds.
-                            <a href="#">Read More <span class="visuallyHidden"> about our compression</span></a>
-                        </dd>
-                    </dl>
-    
-                </main>
-    
-                <aside>
-                    <nav aria-label="page">
-                        <ol>
-                            <li><a href="#" title="View Case Studies">View Case Studies</a></li>
-                            <li><a href="#" title="Our Approach">Our Approach</a></li>
-                            <li><a href="#" title="News">News</a></li>
-                        </ol>
-                    </nav>
-    
-                    <form id="contact" action="/contact" method="POST" novalidate="">
-                        <fieldset>
-                            <legend>Contact</legend>
-    
-                            <label for="name">
-                                Name (Required):
-                                <span class="error-message visuallyHidden">Name cannot be empty</span><!--display none by default-->
-                            </label>
-                            <input id="name" type="text" name="name" required="" aria-invalid="true">
-    
-                            <label for="email" aria-live="assertive"><!--to validate on blur-->
-                                Email (Required):
-                                <span class="error-message visuallyHidden">Name cannot be empty</span>
-                            </label>
-                            <input id="email" type="email" name="email" required="">
-    
-                            <label for="phone">Phone (Required):</label>
-                            <input id="phone" type="tel" name="phone" required="">
-                        </fieldset>
-    
-                        <fieldset>
-                            <legend>Contact Phone Number</legend><!--Legend is announced after every focused element for a screen reader-->
-                            <label><input type="radio" name="home"> Home</label>
-                            <label><input type="radio" name="work"> Work</label>
-                            <label><input type="radio" name="cell"> Cell</label>
-                        </fieldset>
-    
-                        <button>Submit</button>
-                        
-                    </form>
-    
-                </aside>
-            </div>
         </div>
-
-
-
-
-
-        <div class="Grid">
-            <div class="Grid-cell">
-                <h1>This is a headline H1</h1>
-                <h2>This is a headline H2</h2>
-                <h3>This is a headline H3</h3>
-                <p>This is regular content text. It is used for all regular text on the site, like article pages, tab contents etc. This is <a href="#">a link</a> inside regular content text.</p>
-            </div>
-        </div>
-        <div class="Grid Grid--withGutter">
-            <div class="Grid-cell u-xsm-size1of2">1of2</div>
-            <div class="Grid-cell u-xsm-size1of2">1of2</div>
-            <div class="Grid-cell u-xsm-size1of3">1of3</div>
-            <div class="Grid-cell u-xsm-size1of3">1of3</div>    
-            <div class="Grid-cell u-xsm-size1of3">1of3</div>
-            <div class="Grid-cell u-xsm-size1of4">1of4</div>
-            <div class="Grid-cell u-xsm-size1of4">1of4</div>
-            <div class="Grid-cell u-xsm-size1of4">1of4</div>
-            <div class="Grid-cell u-xsm-size1of4">1of4</div>
-          </div>
-        <div class="Grid Grid--withGutter">
-            <div class="Grid-cell u-xsm-sizeFull u-md-size1of2"><first></first></div>
-            <div class="Grid-cell u-xsm-sizeFull u-md-size1of2"><secondondemand></secondondemand></div>
-        </div>
-        <div class="Grid">
-            <div class="Grid-cell"><router-view></router-view></div>
-        </div>
-
-
-        <footer>
-            <nav aria-label="site">
-                <ul>
-                    <li><a href="#" title="Home">Home</a></li>
-                    <li><a href="#" title="About">About</a></li>
-                    <li><a href="#" title="Contact">Contact</a></li>
-                    <li><a href="#" title="View Case Studies">View Case Studies</a></li>
-                    <li><a href="#" title="Our Approach">Our Approach</a></li>
-                    <li><a href="#" title="News">News</a></li>
-                    <li><a href="sitemap.html" title="Sitemap">Sitemap</a></li>
-                </ul>
-            </nav>
-            <div>
-                <p>Pied Piper Company<br>123 Main Street, Suite 700<br>Chicago, Illinois 60654</p>
-            </div>
-        </footer>
-
     </div>
+
     <script src="../Assets/bundled/main.bundle.js"></script>
 </body>
+
 </html>
