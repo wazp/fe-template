@@ -1,0 +1,43 @@
+@import "../common/_variables.less";
+@import "../common/_mixins.less";
+
+#Modal{
+    &-Btn{
+        padding: 6px 10px;
+    }
+    &--viewModal{
+        height: 100%;
+        width: 100%;
+        position: fixed;
+        top:0;
+        left:0;
+        background: rgba(0,0,0,0.2);
+    }
+}
+
+.Modal{
+    display: flex;
+    color: @colorBlack;
+    justify-content: center;
+    align-items: center;
+
+    &--container{
+        width: 75%;
+        height: auto;
+        background-color: @colorWhite;
+        padding: 18px 22px;
+    }
+    @media @bpXLarge{
+        &--container{
+            width: 60%;
+        }
+    }
+    &--close{
+        position:absolute;
+        top: 15px;
+        right: 15px;
+        color: @colorWhite;
+        font-size: 3rem;
+        cursor: pointer;
+    }
+}
