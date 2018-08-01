@@ -62,7 +62,7 @@ TODOS:
 - [ ] List of HTML/CSS components we could use:
   - [ ] Main Menu Dropdowns
   - [ ] Megamenu?
-  - [ ] Full Width Hero
+  - [x] Full Width Hero - Carla
   - ... etc
 - [x] Create static demo HTML page we could use to show what the grid/components look like: (./html/template_demo.html)
   - [ ] Add style to it
