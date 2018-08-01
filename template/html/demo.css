@@ -14,8 +14,7 @@ CSS for the demo template
     background: -o-linear-gradient(-45deg, rgba(242,246,248,1) 0%, rgba(236,222,247,1) 30%, rgba(121,116,153,1) 99%, rgba(121,116,153,1) 100%);
     background: -ms-linear-gradient(-45deg, rgba(242,246,248,1) 0%, rgba(236,222,247,1) 30%, rgba(121,116,153,1) 99%, rgba(121,116,153,1) 100%);
     background: linear-gradient(135deg, rgba(242,246,248,1) 0%, rgba(236,222,247,1) 30%, rgba(121,116,153,1) 99%, rgba(121,116,153,1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f6f8', endColorstr='#797499', GradientType=1 );
-    
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f6f8', endColorstr='#797499', GradientType=1 );    
 }
 
 /*For svg logo*/
@@ -26,4 +25,8 @@ table td{
     color: #666;
     font-size: .8em;
     text-align: left;
+}
+
+.Slider-item{
+    background: #2E435A;
 }
