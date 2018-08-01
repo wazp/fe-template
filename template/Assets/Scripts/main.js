@@ -13,6 +13,7 @@ import router from '@/Scripts/router'
 {{/router}}
 import first from '@Components/first.vue'
 import './vueImports'
+import { slider } from '@/Scripts/custom/slider.js'
 
 let App = new Vue({ // eslint-disable-line no-unused-vars
     el: '#App',
@@ -31,5 +32,7 @@ let App = new Vue({ // eslint-disable-line no-unused-vars
 {{#styleguide}}
 stylemarkTest()
 {{/styleguide}}
+
+slider()
 
 console.log('main.js done!')
