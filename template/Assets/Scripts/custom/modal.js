@@ -1,18 +1,14 @@
 export default function() {
-    if (document.getElementById('Modal--viewModal')) {
-        document.getElementById('Modal--viewModal')
+    if (document.querySelector('.Modal--display')) {
+        // document.getElementById('Modal--viewModal')
 
         // open the modal
-        document.getElementById('Modal-Btn').addEventListener('click', function () {
-            document.getElementById('Modal--viewModal').style.display = 'flex'
+        document.querySelector('[data-modalBtn]').addEventListener('click', function () {
+            document.querySelector('.Modal--display').classList.add('Modal--show')
         })
 
-        // close the modal
-        let modalClose = document.querySelectorAll('.Modal--close')
-        for (let i = 0; i < modalClose.length; i++) {
-            modalClose[i].addEventListener('click', function (e) {
-                this.parentNode.style.display = 'none'
-            })
-        }
+        document.querySelector('.Modal--close').addEventListener('click', function () {
+            document.querySelector('.Modal--display').classList.remove('Modal--show')
+        })
     }
 }
