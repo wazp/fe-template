@@ -1,0 +1,78 @@
+@import "../common/_variables.less";
+@import "../common/_mixins.less";
+
+/*
+---
+name: Hero
+category: Components
+---
+
+Modifiers:
+- Hero--imageFull: sets hero to 100vh - nav
+- Hero--imageHalf: sets hero to 50vh - nav
+- Hero--imageThreeQuarter: sets hero to 75vh - nav
+
+```hero.html
+<div class="Hero">
+    <div class="Hero--imageHalf Hero--size" style="background-image: url('https://goo.gl/YJbuQB');">
+        <div class="Hero--content">
+            <h1>Sample Hero</h1>
+        </div>
+    </div>
+</div>
+```
+*/
+
+.Hero{
+    width: 100%;  
+
+    &--image{
+        position: relative;
+        z-index: -1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        min-height: 25vh;
+    }
+
+    &--size{
+        background-size: cover;
+    }
+
+    &--imageFull{
+        position: relative;
+        z-index: -1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        min-height: calc(~'100vh - 80px');
+    }
+
+    &--imageHalf{
+        position: relative;
+        z-index: -1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: calc(~'50vh - 80px');
+        min-height: 250px;
+    }
+
+    &--imageThreeQuarter{
+        position: relative;
+        z-index: -1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        min-height: calc(~'75vh - 80px');
+    }
+
+    &--content{
+        color:@colorBlack; 
+        text-align:center;
+    }
+}
