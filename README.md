@@ -60,7 +60,7 @@ TODOS:
   - [x] Modals - Carla (in progress)
   - ... etc
 - [ ] List of HTML/CSS components we could use:
-  - [ ] Main Menu Dropdowns
+  - [x] Main Menu Dropdowns - Carla
   - [ ] Megamenu?
   - [x] Full Width Hero - Carla
   - ... etc
