@@ -92,6 +92,7 @@ module.exports = {
   },
   filters: {
     'Assets/Vue/**/*': 'vue',
+    'html/json/*': 'vue',
     'Assets/Scripts/store.js': 'vue && vuex',
     'Assets/Scripts/router.js': 'vue && router',
     'Assets/Vue/Views/**/*': 'vue && router', // install "Views" if we have Vue-router

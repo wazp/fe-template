@@ -18,7 +18,9 @@ CSS for the demo template
 }
 
 /*For svg logo*/
-.cls-1{fill:#242424;}
+.cls-1{
+    fill:#242424;
+}
 
 table td{
     border-bottom: 1px solid #eee;

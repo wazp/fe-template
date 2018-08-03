@@ -113,16 +113,8 @@
     }
 
     &--autoplay {
-        pointer-events:none;
+        //pointer-events:none;
         padding: 0;
-
-        .Slider-dots {
-            display: none;
-        }
-
-        .Slider-arrow {
-            display: none;
-        }
     }
 }
 
@@ -159,7 +151,8 @@
     position: relative;
     display: inline-block;
     height: 100px;
-    background: @colorGrey;
+    background-color: @colorGrey;
+    background-size: cover;
     color: white;
 
     > div {
