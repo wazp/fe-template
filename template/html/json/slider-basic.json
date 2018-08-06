@@ -1,0 +1,14 @@
+[
+    {
+        "headline": "Slide Headline 1 - Vue",
+        "text": "Slide Text 1",
+        "image": "https://picsum.photos/800/200?image=0",
+        "id": 1
+    },
+    {
+        "headline": "Slide Headline 2 - Vue",
+        "text": "Slide Text 2",
+        "image": "https://picsum.photos/800/200?image=1",
+        "id": 2
+    }
+]

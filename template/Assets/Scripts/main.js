@@ -4,17 +4,17 @@
 import Vue from 'vue'
 {{#vuex}}
 import store from '@/Scripts/store'
-{{#styleguide}}
-import stylemarkTest from '@/Scripts/custom/toggle.js'
-{{/styleguide}}
 {{/vuex}}
 {{#router}}
 import router from '@/Scripts/router'
 {{/router}}
 import first from '@Components/first.vue'
 import './vueImports'
+{{/vue}}
+import toggle from '@/Scripts/custom/toggle.js'
 import { slider } from '@/Scripts/custom/slider.js'
 
+{{#vue}}
 let App = new Vue({ // eslint-disable-line no-unused-vars
     el: '#App',
     {{#router}}
@@ -29,10 +29,7 @@ let App = new Vue({ // eslint-disable-line no-unused-vars
 })
 {{/vue}}
 
-{{#styleguide}}
-stylemarkTest()
-{{/styleguide}}
-
 slider()
+toggle()
 
 console.log('main.js done!')

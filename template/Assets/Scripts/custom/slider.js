@@ -1,6 +1,6 @@
 import { lory } from '@/Scripts/vendor/lory.min'
 
-export function slider() {
+export function slider(elem, sliderstyle) {
     let config = {
         infinite: 1,
         slidesToScroll: 1,
@@ -12,7 +12,8 @@ export function slider() {
         classNameNextCtrl: 'Slider-arrow--next'
     }
 
-    let sliderEl = document.querySelectorAll('[data-slider]')
+    let isVueComponent = elem !== undefined
+    let sliderEl = (isVueComponent ? elem : document.querySelectorAll('[data-slider]'))
 
     if (sliderEl === null) {
         return false
@@ -168,23 +169,24 @@ export function slider() {
 
     for (let el in sliderEl) {
         if (!sliderEl.hasOwnProperty(el)) break
-        let sliderType = sliderEl[el].getAttribute('data-slider')
+
+        let sliderType = (isVueComponent ? sliderstyle : sliderEl[el].getAttribute('data-slider'))
 
         switch (sliderType) {
         case 'basic':
-            create.basic(sliderEl[el])
+            create.basic((isVueComponent ? sliderEl : sliderEl[el]))
             break
 
         case 'multiSlide':
-            create.multiSlide(sliderEl[el])
+            create.multiSlide((isVueComponent ? sliderEl : sliderEl[el]))
             break
 
         case 'thumbnail':
-            create.thumbnail(sliderEl[el])
+            create.thumbnail((isVueComponent ? sliderEl : sliderEl[el]))
             break
 
         case 'autoplay':
-            create.autoplay(sliderEl[el])
+            create.autoplay((isVueComponent ? sliderEl : sliderEl[el]))
             break
         }
     }
