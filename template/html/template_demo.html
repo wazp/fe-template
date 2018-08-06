@@ -38,9 +38,9 @@
             <a class="skip-link u-hiddenVisually" href="#main">Skip to main</a>
             <!--Level A 2.4.1 - Bypass Blocks: Skip Link to main content-->
 
-            <header class="SiteHeader ContentWidth">
-                <div>
-                    <div class="Grid Grid--hasContainerWidth Grid--withExtraWideGutter">
+            <header class="SiteHeader">
+                <div class="ContentWidth">
+                    <div class="Grid Grid--withExtraWideGutter">
                         <div class="Grid-cell u-md-size2of4">
 
                             <div class="Grid">
@@ -105,16 +105,14 @@
             </div>
 
             <div class="ContentWidth">
-                <div class="Grid Grid--hasContainerWidth Grid--withExtraWideGutter ">
+                <div class="Grid Grid--withExtraWideGutter">
                     <main id="main" tabindex="-1" class="Grid-cell u-md-size3of4">
 
                         <div class="Grid">
 
-                            {{#vue}}
                             <div class="Grid-cell">
                                 <slider :dots="true" :arrows="true" :sliderstyle="'basic'" :api="'/html/json/slider-basic.json'"></slider>
                             </div>
-                            {{/vue}}
 
                             <div class="Grid-cell">
                                 <div class="Slider" data-slider="basic">
@@ -270,7 +268,7 @@
 
         </div>
 
-        <div class="ContentWidth ContainerWidth">
+        <div class="ContentWidth">
             <div class="Grid Grid--withGutter">
                 <div class="Grid-cell u-xsm-sizeFull u-md-size1of2">
                     <first></first>
@@ -288,38 +286,40 @@
         </div>
 
         <footer class="SiteFooter">
-            <div class="Grid Grid--hasContainerWidth ContentWidth">
-                <div class="Grid-cell">
-                    <nav aria-label="site">
-                        <ul class="List List--horizontal List--bordered">
-                            <li class="List-item">
-                                <a href="#" title="Home">Home</a>
-                            </li>
-                            <li class="List-item">
-                                <a href="#" title="About">About</a>
-                            </li>
-                            <li class="List-item">
-                                <a href="#" title="Contact">Contact</a>
-                            </li>
-                            <li class="List-item">
-                                <a href="#" title="View Case Studies">View Case Studies</a>
-                            </li>
-                            <li class="List-item">
-                                <a href="#" title="Our Approach">Our Approach</a>
-                            </li>
-                            <li class="List-item">
-                                <a href="#" title="News">News</a>
-                            </li>
-                            <li class="List-item">
-                                <a href="sitemap.html" title="Sitemap">Sitemap</a>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
-                <div class="Grid-cell">
-                    <p>Lorem Ipsum Company
-                        <br>123 Main Street, Suite 700
-                        <br>Chicago, Illinois 60654</p>
+            <div class="ContentWidth">
+                <div class="Grid">
+                    <div class="Grid-cell">
+                        <nav aria-label="site">
+                            <ul class="List List--horizontal List--bordered">
+                                <li class="List-item">
+                                    <a href="#" title="Home">Home</a>
+                                </li>
+                                <li class="List-item">
+                                    <a href="#" title="About">About</a>
+                                </li>
+                                <li class="List-item">
+                                    <a href="#" title="Contact">Contact</a>
+                                </li>
+                                <li class="List-item">
+                                    <a href="#" title="View Case Studies">View Case Studies</a>
+                                </li>
+                                <li class="List-item">
+                                    <a href="#" title="Our Approach">Our Approach</a>
+                                </li>
+                                <li class="List-item">
+                                    <a href="#" title="News">News</a>
+                                </li>
+                                <li class="List-item">
+                                    <a href="sitemap.html" title="Sitemap">Sitemap</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="Grid-cell">
+                        <p>Lorem Ipsum Company
+                            <br>123 Main Street, Suite 700
+                            <br>Chicago, Illinois 60654</p>
+                    </div>
                 </div>
             </div>
         </footer>
@@ -329,7 +329,6 @@
 
     <script src="../Assets/bundled/main.bundle.js"></script>
 
-    {{#vue}}
     <script>
         window.carousel = {
             items: [
@@ -348,7 +347,6 @@
             ]
         }
     </script>
-    {{/vue}}
 
 </body>
 </html>

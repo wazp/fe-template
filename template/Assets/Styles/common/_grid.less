@@ -102,13 +102,6 @@ Use padding on a container, or `overflow-x:hidden` to protect against it.
   padding-right: (1px * @gutterSize);
 }
 
-@media only screen and (min-width: @containerWidth), print{
-  .Grid--hasContainerWidth{
-      max-width:@containerWidth;
-      margin:0 auto;
-  }
-}
-
 @media @bpMedium {
   .Grid--withExtraWideGutter {
       margin-left: (-2px * @gutterSize);
