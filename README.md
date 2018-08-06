@@ -56,7 +56,7 @@ TODOS:
 - [ ] List of reusable Vue components we could use:
   - [x] Carousel - Joe G
   - [ ] Tabs
-  - [ ] Accordions
+  - [x] Accordions - Joe G (in progress)
   - [x] Modals - Carla (in progress)
   - ... etc
 - [ ] List of HTML/CSS components we could use:
