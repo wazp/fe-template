@@ -93,6 +93,7 @@
     {{/styleguide}}
     "source-map-explorer": "^1.5.0",
     "webpack": "^4.16.3",
+    "webpack-build-notifier": "^0.1.28",
     "webpack-cli": "^3.1.0",
     "whatwg-fetch": "^2.0.4"
   },

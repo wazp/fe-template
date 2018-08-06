@@ -9,7 +9,8 @@ const path = require('path'),
     {{/vue}}
     miniCssExtractPlugin = require("mini-css-extract-plugin"),
     uglifyJsPlugin = require('uglifyjs-webpack-plugin'),
-    cleanWebpackPlugin = require('clean-webpack-plugin')
+    cleanWebpackPlugin = require('clean-webpack-plugin'),
+    WebpackBuildNotifierPlugin = require('webpack-build-notifier')
 
 {{#vue}}
 /*
@@ -172,7 +173,10 @@ module.exports = {
             exclude:  ['_README.md'],
             verbose:  true,
             dry: false}),
-        new webpack.WatchIgnorePlugin([/node_modules/]) // turn off watcher for node_modules
+        new webpack.WatchIgnorePlugin([/node_modules/]), // turn off watcher for node_modules
+        new WebpackBuildNotifierPlugin({
+            title: "{{ name }} FE Webpack Build"
+        })
     ],
     resolve: {
         alias: {
