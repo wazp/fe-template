@@ -4,7 +4,7 @@
             <div class="Slider-container">
                 <div class="Slider-frame">
                     <ul class="Slider-list">
-                        <component :is="'slide-'+sliderstyle" v-for="item in items" :key="item.id" :obj="item" :slidestyle="sliderstyle"></component>
+                        <component :is="'slide-'+sliderstyle" v-for="item in items" :key="item.id" :result="item" :slidestyle="sliderstyle"></component>
                     </ul>
                 </div>
                 <span class="Slider-arrow Slider-arrow--prev" v-if="arrows"></span>

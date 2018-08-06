@@ -1,13 +1,13 @@
 <template>
     <li class="Slider-item">        
-        <img :src="obj.image">
+        <img :src="result.image">
     </li>
 </template>
 
 <script>
 export default {
     name: "item",
-    props: ['obj'],
+    props: ['result']
 }
 </script>
 

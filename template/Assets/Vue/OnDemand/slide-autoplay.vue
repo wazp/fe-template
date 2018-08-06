@@ -1,8 +1,8 @@
 <template>
-    <li class="Slider-item" :style="{backgroundImage: 'url('+obj.image+')'}">
+    <li class="Slider-item" :style="{backgroundImage: 'url('+result.image+')'}">
         <div class="u-alignMiddleTranslate">
-            <h3>{{obj.headline}}</h3>
-            <p>{{obj.text}}</p>
+            <h3 v-text="result.headline"></h3>
+            <p v-text="result.text"></p>
         </div>
     </li>
 </template>
@@ -10,7 +10,7 @@
 <script>
 export default {
     name: "item",
-    props: ['obj']
+    props: ['result']
 }
 </script>
 
