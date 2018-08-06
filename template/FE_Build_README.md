@@ -79,15 +79,16 @@ Other options include:
 - `build:stats` to generate html report of bundle size for production builds
 - `watcher` to start the watcher (you probably don't want this running outside of the NPM Task runner in VS)
 {{#lint}}
-- `lint` to lint your .js{{#vue}}/.vue{{/vue}} files.
+- `lint` to lint your .js{{#vue}}/.vue{{/vue}} files. Please note that this will always go through _all_ files, not just the ones that become bundled in the end.
 - `lint:fix` to automatically fix common lint mistakes (like no new line etc)
 {{/lint}}
 {{#unit}}
 - `test` to run unit tests with code coverage
 {{/unit}}
-- `e2e` to trigger E2E tests with crossbrowsertraining.com
-- `clean` to clean out all the currently compiled files
+- `e2e` to trigger E2E tests with crossbrowsertraining.com - NOT IMPLEMENTED YET
+{{#styleguide}}
 - `styleguide` for generating styleguide
+{{/styleguide}}
 
 ## Development Process
 

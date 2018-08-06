@@ -75,7 +75,7 @@ To get started:
     )}${lintMsg(data)}${data.autoInstall} run dev`
   )}
   
-Documentation can be found in ./FE_Build_README.md. You can also take a look at ./html/template_demo.html for a quick demo of the grid etc.
+Documentation can be found in ${green(`./FE_Build_README.md`)}. You can also take a look at ${green(`./html/template_demo.html`)} for a quick demo of the grid etc.
 `
   console.log(message)
 }

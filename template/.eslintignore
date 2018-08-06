@@ -1,1 +1,3 @@
-Assets/Scripts/vendor/**/*.js
+Assets/Scripts/vendor/*
+Assets/bundled/*
+*.test.*

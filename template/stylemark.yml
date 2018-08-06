@@ -27,7 +27,7 @@ examples:
     # - https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js
     # - Assets/bundled/main.bundle.js
 
-    doctypeTag: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+    doctypeTag: <!DOCTYPE html>
     htmlTag: <html>
     bodyTag: <body>
 
