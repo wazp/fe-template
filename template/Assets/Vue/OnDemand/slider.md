@@ -8,6 +8,7 @@ category: Vue
 Swipe slider Vue component.
 
 Props:
+
 Prop | Description | Options
 --- | --- | ---
 :sliderstyle | Choose from one of four types of sliders. | 'autoplay', 'basic', 'thumbnail', multislide'
