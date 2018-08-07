@@ -113,9 +113,24 @@ module.exports = {
                 use: [
                     miniCssExtractPlugin.loader,
                     //'vue-style-loader',
-                    'css-loader',
-                    'postcss-loader',
-                    'less-loader',
+                    {
+                        loader: 'css-loader',
+                        options: {
+                            sourceMap: true,
+                        },
+                    },
+                    { 
+                        loader: 'postcss-loader', 
+                        options: { 
+                            sourceMap: true 
+                        } 
+                    },
+                    {
+                        loader: 'less-loader',
+                        options: {
+                            sourceMap: true,
+                        },
+                    },
                     'import-glob-loader'
                 ]
             },
