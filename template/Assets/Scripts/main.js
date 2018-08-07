@@ -12,6 +12,7 @@ import first from '@Components/first.vue'
 import './vueImports'
 {{/vue}}
 import toggle from '@/Scripts/custom/toggle.js'
+import accordion from '@/Scripts/custom/accordion.js'
 import { slider } from '@/Scripts/custom/slider.js'
 
 {{#vue}}
@@ -30,6 +31,7 @@ let App = new Vue({ // eslint-disable-line no-unused-vars
 {{/vue}}
 
 slider()
+accordion()
 toggle()
 
 console.log('main.js done!')
