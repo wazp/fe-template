@@ -46,7 +46,6 @@ table td{
 
 .Nav--items:hover{
     border: 1px solid rgba(46,67,90, 1);
-    color: #cb4154;
 }
 
 a.Nav--subNav{

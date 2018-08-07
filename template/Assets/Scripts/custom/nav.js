@@ -12,4 +12,15 @@ export default function () {
         })
     }
     console.log('out of loop test')
+
+     // Responsive hamburger menu js
+     let navResponsive = document.querySelector('.navResponsive')
+     let mobileNav = document.querySelector('.Nav--mobile')
+ 
+     navResponsive.addEventListener('click', function () {
+         navResponsive.classList.toggle('change')
+         setTimeout(function () {
+             mobileNav.classList.toggle('mobile')
+         }, 350)
+     })
 }
