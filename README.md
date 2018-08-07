@@ -60,8 +60,8 @@ TODOS:
   - [x] Modals - Carla (in progress)
   - ... etc
 - [ ] List of HTML/CSS components we could use:
-  - [x] Main Menu Dropdowns - Carla
-  - [ ] Megamenu?
+  - [x] Main Menu Dropdowns - Carla (pull request sent)
+  - [x] Megamenu - Carla (in progress)
   - [x] Full Width Hero - Carla
   - ... etc
 - [x] Create static demo HTML page we could use to show what the grid/components look like: (./html/template_demo.html)
