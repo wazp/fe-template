@@ -30,3 +30,54 @@ table td{
 .Slider-item{
     background: #2E435A;
 }
+
+.Nav--items {
+    box-sizing: none;
+    border: 1px solid rgba(46,67,90, 0);
+    color: #2e435a;
+    display: block;
+    min-width: 100px;
+    text-align: center;
+    background-color: transparent;
+    margin: 0 2px;
+    cursor: pointer;
+    transition: border 0.5s;
+}
+
+.Nav--items:hover{
+    border: 1px solid rgba(46,67,90, 1);
+    color: #cb4154;
+}
+
+a.Nav--subNav{
+    color: #2e435a;
+    border-bottom: 1px solid rgba(203, 65, 84, 0);
+    padding: 4px 0 2px 0;
+    transition: border 0.5s;
+}
+
+a.btnFill{
+    color:#2e435a;
+}
+
+.Nav--subNav .subList{
+    background-color: #2e435a;
+    min-width: 150px;
+    text-align: center;
+}
+
+.Nav--subNav .subList:not(:last-child):after{
+    content: "";
+    display: block;
+    height: 1px;
+    width: 60%;
+    margin: auto;
+    background: #f5f5f5;
+}
+
+.Nav--subNav .subList a{
+    color: #f5f5f5;
+}
+.subList a:hover{
+    color: #FFFF99;
+}

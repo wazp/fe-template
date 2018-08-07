@@ -1,0 +1,35 @@
+@import "../common/_variables.less";
+@import "../common/_mixins.less";
+
+.Nav{
+    display: flex;
+    list-style-type: none;
+
+    >li{
+        position: relative;
+    }
+    &--items{
+        padding: 8px;
+    }
+
+    &--subNav{
+        display: none;
+        list-style-type: none;  
+        
+        .subList {
+            padding: 5px 8px;
+            
+            >a{
+                color: @linkColorAlternate;                
+            }
+        }
+    }
+
+    .is-Active{
+        display:block;
+        position: absolute;
+        z-index: 2;
+        padding:0;
+        width: 100%;
+    }
+}

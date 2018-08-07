@@ -14,6 +14,7 @@ import router from '@/Scripts/router'
 import first from '@Components/first.vue'
 import './vueImports'
 import { slider } from '@/Scripts/custom/slider.js'
+import navigation from '@/Scripts/custom/nav.js'
 
 let App = new Vue({ // eslint-disable-line no-unused-vars
     el: '#App',
@@ -34,5 +35,6 @@ stylemarkTest()
 {{/styleguide}}
 
 slider()
+navigation()
 
 console.log('main.js done!')
