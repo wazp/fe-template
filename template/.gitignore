@@ -1,8 +1,12 @@
 .DS_Store
+
+# Output folder used by Webpack or other FE stuff
 node_modules/
 dist/
 npm-debug.log
 yarn-error.log
+**/bundled/*
+!**/bundled/*.md
 
 # Editor directories and files
 .idea
