@@ -42,10 +42,7 @@ TODOS:
 - [x] Setup webpack configuration
   - [ ] Upgrade webpack to version 4
 - [x] Find good living styleguide for webpack implementations
-  - [x] [Stylemark](https://github.com/nextbigsoundinc/stylemark) - Branch: styleguide-stylemark | Review - Best one so far, we just need to see if it can include vue components.
-    - [x] Test including vue components
-  - [x] [SC5](https://github.com/SC5/sc5-styleguide) - Branch: styleguide | Review - Has too many errors when using basic less functions.
-  - [x] [DevBridge](https://github.com/devbridge/Styleguide) - Branch: styleguide-devbridge | Review - Not robust enough for us, only generates stuff thats in variables. Rest of styles and markup have to be inputted manually, and not inside our source code.
+  - [x] [Stylemark](https://github.com/nextbigsoundinc/stylemark), [SC5](https://github.com/SC5/sc5-styleguide), [DevBridge](https://github.com/devbridge/Styleguide)
 - [x] Cleanup CSS
   - [x] Eliminate some styles since this was copied from another site.
   - [x] Add any base styles that we would like to have (ex: Forms)
@@ -54,9 +51,8 @@ TODOS:
 - [ ] Setup E2E tests with CrossBrowserTesting.com - Patrick
 - [ ] Create Readme Markdown files with examples of various things we use.
 - [ ] List of reusable Vue components we could use:
-  - [x] Carousel - Joe G
-  - [ ] Tabs
-  - [x] Accordions - Joe G (in progress)
+  - [x] Carousel
+  - [x] Accordions
   - [x] Modals - Carla (in progress)
   - ... etc
 - [ ] List of HTML/CSS components we could use:
@@ -65,7 +61,7 @@ TODOS:
   - [x] Full Width Hero - Carla
   - ... etc
 - [x] Create static demo HTML page we could use to show what the grid/components look like: (./html/template_demo.html)
-  - [ ] Add style to it
+  - [x] Add style to demo
   - [x] Add WCAG 2.0 compliant snippets for common use cases.
 - [x] Add toaster notification so devs can see when webpack finishes compiling.  - Joe G
 - [ ] Nice to have: Add build question "Use CSS Grid? (Default: No) Reccommended for sites supporting evergreen only.", if so, swap out the _grid.less file with a CSS Grid version.
