@@ -36,8 +36,8 @@ Types of buttons:
 ```
 */
 
-.Button {
-  background: transparent;
+.Button, button {
+  background: lighten(@colorGrey, 50%);
   border-color: @Button-border-color;
   border-radius: 0;
   border-style: solid;
@@ -58,7 +58,7 @@ Types of buttons:
  * Remove excess padding and border in Firefox 4+
  */
 
-.Button::-moz-focus-inner {
+.Button::-moz-focus-inner, button::-moz-focus-inner {
   border: 0;
   padding: 0;
 }
@@ -68,7 +68,7 @@ Types of buttons:
  * results in a loss of the default `button` focus styles.
  */
 
-.Button:focus {
+.Button:focus, button:focus {
   outline: 1px dotted;
   outline: 5px auto -webkit-focus-ring-color;
 }
@@ -80,7 +80,11 @@ Types of buttons:
 .Button:hover,
 .Button:focus,
 .Button:active,
-.Button.is-active {
+.Button.is-active,
+button:hover,
+button:focus,
+button:active,
+button.is-active {
   text-decoration: none;
   color: @colorActiveText;
   background: @colorActiveBackground;
@@ -88,7 +92,9 @@ Types of buttons:
 }
 
 .Button:disabled,
-.Button.is-disabled {
+.Button.is-disabled,
+button:disabled,
+button.is-disabled {
   cursor: default;
   opacity: @Button-disabled-opacity;
 }

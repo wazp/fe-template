@@ -2,13 +2,13 @@
     {
         "headline": "Slide Headline 1 - Vue",
         "text": "Slide Text 1",
-        "image": "https://picsum.photos/800/200?image=0",
+        "image": "https://images.unsplash.com/photo-1533656415749-6c07e8d9531b?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=7c38bfcb715fba70810b258aa00bb7ef&auto=format&fit=crop&w=1000&h=300",
         "id": 1
     },
     {
         "headline": "Slide Headline 2 - Vue",
         "text": "Slide Text 2",
-        "image": "https://picsum.photos/800/200?image=1",
+        "image": "https://picsum.photos/1000/300?image=3",
         "id": 2
     }
 ]
