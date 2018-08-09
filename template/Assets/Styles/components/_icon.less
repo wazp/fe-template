@@ -1,0 +1,113 @@
+@import "../common/_variables.less";
+@import "../common/_mixins.less";
+
+/*
+---
+name: Icon
+category: Base
+---
+
+Size | Dimension | Class
+--- | --- | ---
+Small | 16x16 | `.Icon--size-sm`
+Medium | 32x32 | `.Icon--size-md`
+Large | 64x64 | `.Icon--size-lg`
+
+```icon.html
+<p>Sizes:</p>
+<ul class="List List--horizontal">
+    <li class="List-item">
+        <div class="Icon Icon--size-sm">
+            <svg>
+                <use xlink:href="#facebook"></use>
+            </svg>
+        </div>
+    </li>
+    <li class="List-item">
+        <div class="Icon Icon--size-md">
+            <svg>
+                <use xlink:href="#facebook"></use>
+            </svg>
+        </div>
+    </li>
+    <li class="List-item">
+        <div class="Icon Icon--size-lg">
+            <svg>
+                <use xlink:href="#facebook"></use>
+            </svg>
+        </div>
+    </li>
+</ul>
+
+<hr>
+
+<p>Icons:</p>
+<ul class="List List--horizontal">
+    <li class="List-item">
+        <div class="Icon Icon--size-md">
+            <svg>
+                <use xlink:href="#facebook"></use>
+            </svg>
+        </div>
+    </li>
+    <li class="List-item">
+        <div class="Icon Icon--size-md">
+            <svg>
+                <use xlink:href="#linkedin"></use>
+            </svg>
+        </div>
+    </li>
+    <li class="List-item">
+        <div class="Icon Icon--size-md">
+            <svg>
+                <use xlink:href="#twitter"></use>
+            </svg>
+        </div>
+    </li>
+    <li class="List-item">
+        <div class="Icon Icon--size-md">
+            <svg>
+                <use xlink:href="#google"></use>
+            </svg>
+        </div>
+    </li>
+    <li class="List-item">
+        <div class="Icon Icon--size-md">
+            <svg>
+                <use xlink:href="#search"></use>
+            </svg>
+        </div>
+    </li>
+</ul>
+```
+*/
+
+.Icon {
+    display: flex;
+
+    svg {
+        color: currentColor;
+        fill: currentColor;
+    }
+
+    &--size-sm {
+        width: 16px;
+        height: 16px;
+    }
+
+    &--size-md {
+        width: 32px;
+        height: 32px;
+    }
+
+    &--size-lg {
+        width: 64px;
+        height: 64px;
+    }
+
+    &--search {
+        svg {
+            stroke: currentColor;
+        }
+    }
+}

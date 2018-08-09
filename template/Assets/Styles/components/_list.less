@@ -51,11 +51,11 @@ Listing content in either horizontal or vertical direction, while supporting all
 .List-item {
     padding-top: @List-gutterVerticalDefault/2;
     padding-bottom: @List-gutterVerticalDefault/2;
-    
+
     .List > &:first-child {
         padding-top: 0;
     }
-    
+
     .List > &:last-child {
         padding-bottom: 0;
     }
@@ -72,7 +72,7 @@ Listing content in either horizontal or vertical direction, while supporting all
 .List--bordered {
     & > .List-item {
         border-bottom: 1px solid @List-borderColor;
-        
+
         &:last-child {
             border-bottom: none;
         }
@@ -83,12 +83,12 @@ Listing content in either horizontal or vertical direction, while supporting all
     & > .List-item {
         padding-top: 0;
         padding-bottom: 0;
-        
+
         .List-itemContent {
             display: block;
             padding: @List-gutterVerticalDefault/2 @List-gutterHorizontalDefault/2;
         }
-        
+
         &:nth-child(odd) .List-itemContent {
             background: @List-stripedColor;
         }
@@ -98,14 +98,13 @@ Listing content in either horizontal or vertical direction, while supporting all
 .List--horizontal {
     margin-left: -@List-gutterHorizontalDefault/2;
     margin-right: -@List-gutterHorizontalDefault/2;
-    
+
     .List-item {
         display: inline-block;
         margin-right: -.25em; // remove inline-block space between elements. this may be inconsistent when changing font-family
-        
         padding-right: @List-gutterHorizontalDefault/2;
         padding-left: @List-gutterHorizontalDefault/2;
-        
+
         &:first-child{
             padding-top: @List-gutterVerticalDefault/2;
         }
@@ -114,22 +113,22 @@ Listing content in either horizontal or vertical direction, while supporting all
             padding-right: 0;
         }
     }
-    
+
     &.List--bordered {
         & > .List-item {
             border-right: 1px solid @List-borderColor;
             border-bottom: none;
-     
+
             &:last-child {
                 border-right: none;
             }
         }
     }
-    
+
     &.List--striped {
         margin-left: 0 !important;
         margin-right: 0 !important;
-        
+
         & > .List-item {
             padding-left: 0;
             padding-right: 0;
@@ -137,9 +136,7 @@ Listing content in either horizontal or vertical direction, while supporting all
     }
 }
 
-/* 
-    Vertical gutters (top, bottom) 
-*/
+/* Vertical gutters (top, bottom) */
 .List--gutterVz > .List-item {
     padding-top: 0;
     padding-bottom: 0;
@@ -170,13 +167,13 @@ Listing content in either horizontal or vertical direction, while supporting all
     padding-bottom: @spaceXLarge/2;
 }
 
-/* 
-    Horizontal gutters (right, left) 
+/*
+    Horizontal gutters (right, left)
 */
 .List--gutterHz {
     margin-right: 0;
     margin-left: 0;
-    
+
     & > .List-item {
         padding-right: 0;
         padding-left: 0;
@@ -186,7 +183,7 @@ Listing content in either horizontal or vertical direction, while supporting all
 .List--gutterHxsm {
     margin-right: -@spaceXSmall/2;
     margin-left: -@spaceXSmall/2;
-    
+
     & > .List-item {
         padding-right: @spaceXSmall/2;
         padding-left: @spaceXSmall/2;
@@ -196,7 +193,7 @@ Listing content in either horizontal or vertical direction, while supporting all
 .List--gutterHsm {
     margin-right: -@spaceSmall/2;
     margin-left: -@spaceSmall/2;
-    
+
     & > .List-item {
         padding-right: @spaceSmall/2;
         padding-left: @spaceSmall/2;
@@ -206,7 +203,7 @@ Listing content in either horizontal or vertical direction, while supporting all
 .List--gutterHmd {
     margin-right: -@spaceMedium/2;
     margin-left: -@spaceMedium/2;
-    
+
     & > .List-item {
         padding-right: @spaceMedium/2;
         padding-left: @spaceMedium/2;
@@ -216,7 +213,7 @@ Listing content in either horizontal or vertical direction, while supporting all
 .List--gutterHlg {
     margin-right: -@spaceLarge/2;
     margin-left: -@spaceLarge/2;
-    
+
     & > .List-item {
         padding-right: @spaceLarge/2;
         padding-left: @spaceLarge/2;
@@ -226,7 +223,7 @@ Listing content in either horizontal or vertical direction, while supporting all
 .List--gutterHxlg {
     margin-right: -@spaceXLarge/2;
     margin-left: -@spaceXLarge/2;
-    
+
     & > .List-item {
         padding-right: @spaceXLarge/2;
         padding-left: @spaceXLarge/2;

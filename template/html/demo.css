@@ -16,29 +16,41 @@ a{
     color: #0066FF;
 }
 
-.SiteHeader a{
+.SiteHeader a,
+.SiteFooter a {
     color: #fff;
     font-size: 1.2rem;
 }
 
-.SiteHeader a:hover{
+.SiteHeader a:hover,
+.SiteFooter a:hover{
     color: #d85dff;
 }
 
-.SiteHeader, 
+.SiteFooter a {
+    font-size: 1rem;
+}
+
+.SiteHeader,
 .SiteFooter{
     background: linear-gradient(87deg,#6a11cb 0,#2575fc 100%);
 }
 
-.SiteHeader p, 
+.SiteHeader p,
 .SiteFooter p{
     color: #fff;
 }
 
+.SiteFooter .SocialLinks a{
+    color: #2575fc;
+}
+.SiteFooter .SocialLinks a:hover{
+    color: #d85dff;
+}
 
 /*For svg logo*/
-.cls-1{
-    fill:#fff   ;
+.cls-1 {
+    fill: #fff;
 }
 
 table td{

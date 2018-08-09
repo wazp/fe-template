@@ -161,7 +161,7 @@ module.exports = {
             },
             { // SVG symbols to be made into a sprite SVG!
                 test: /\.svg$/,
-                include: path.resolve(__dirname, "Assets/svg/symbol/"),
+                include: path.resolve(__dirname, "Assets/Images/svg/symbol/"),
                 exclude: /node_modules/,
                 use: [
                     { loader: 'svg-sprite-loader' },

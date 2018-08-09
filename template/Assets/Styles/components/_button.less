@@ -1,13 +1,6 @@
 @import "../common/_variables.less";
 @import "../common/_mixins.less";
 
-@Button-border-color: @colorGrey;
-@Button-border-width: 1px;
-@Button-color: inherit;
-@Button-disabled-opacity: 0.6;
-@Button-font: inherit;
-@Button-padding: 0.4em 0.75em;
-
 /*
 ---
 name: Button
@@ -35,6 +28,13 @@ Types of buttons:
 4. Prevent button text from being selectable.
 ```
 */
+
+@Button-border-color: @colorGrey;
+@Button-border-width: 1px;
+@Button-color: inherit;
+@Button-disabled-opacity: 0.6;
+@Button-font: inherit;
+@Button-padding: 0.4em 0.75em;
 
 .Button, button {
   background: lighten(@colorGrey, 50%);
