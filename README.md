@@ -52,6 +52,7 @@ TODOS:
 - [x] Setup unit test examples - Patrick
 - [ ] Setup E2E tests with CrossBrowserTesting.com - Patrick
 - [ ] Create Readme Markdown files with examples of various things we use.
+- [x] SVG icon sprite
 - [ ] List of reusable Vue components we could use:
   - [x] Carousel
   - [x] Accordions
