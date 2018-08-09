@@ -26,6 +26,8 @@ $ vue init wazp/fe-template <path to web root>
 $ cd <path to web root>
 $ npm install
 ```
+Include all generated files into the solution, except the files under `/Assets/bundled`.
+
 
 TODOS:
 - [x] Make linting work good in VS
