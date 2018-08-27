@@ -49,6 +49,7 @@ module.exports = {
         main: [
             // 'babel-polyfill', NOT USED ANYMORE. Be more granular in /Assets/Scripts/es6.polyfills.js instead!
             // 'whatwg-fetch', Also moved to es6.polyfills.js!
+            './Assets/Scripts/es6.polyfills.js',
             './Assets/Scripts/Main.js',
             './Assets/Styles/Main.less'
         ]

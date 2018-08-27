@@ -16,9 +16,7 @@
 </template>
 
 <script>
-    import { lory } from '@/Scripts/vendor/lory.min'
     import { slider } from '@/Scripts/custom/slider'
-
     import slideBasic from './slide-basic.vue'
     import slideAutoplay from './slide-autoplay.vue'
     import slideThumbnail from './slide-thumbnail.vue'
