@@ -34,7 +34,6 @@ let App = new Vue({ // eslint-disable-line no-unused-vars
     }
 })
 {{/vue}}
-
 accordion()
 slider()
 

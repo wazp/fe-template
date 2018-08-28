@@ -87,11 +87,13 @@
                                             <input type="search" id="query" name="search" class="InputGroup-input" placeholder="Enter search term...">
                                             <!--Level AA 2.4.5 - Muliple Ways: Provide more than one way to locate a page on the site. Either via Search or a Sitemap.-->
                                             <button class="InputGroup-addon InputGroup-addon--button Button">
+                                                {{#vue}}
                                                 <div class="Icon Icon--search Icon--size-md">
                                                     <svg>
                                                         <use xlink:href="#search"></use>
                                                     </svg>
                                                 </div>
+                                                {{/vue}}
                                                 <span class="u-hiddenVisually">Search</span>
                                             </button>
                                         </div>
@@ -316,7 +318,9 @@
 
             <div class="Grid">
                 <div class="Grid-cell">
+                    {{#router}}
                     <router-view></router-view>
+                    {{/router}}
                 </div>
             </div>
         </div>
@@ -356,6 +360,7 @@
                         <br>123 Main Street, Suite 700
                         <br>Chicago, Illinois 60654</p>
                     </div>
+                    {{#vue}}
                     <div class="Grid-cell">
                         <ul class="List List--horizontal SocialLinks">
                             <li class="List-item">
@@ -396,6 +401,7 @@
                             </li>
                         </ul>
                     </div>
+                    {{/vue}}
                 </div>
             </div>
         </footer>

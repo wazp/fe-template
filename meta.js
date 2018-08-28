@@ -91,8 +91,10 @@ module.exports = {
     },
   },
   filters: {
-    'Assets/Vue/Components/* && Assets/Vue/OnDemand/*': 'vue',
+    'Assets/Vue/Components/*': 'vue',
+    'Assets/Vue/OnDemand/*': 'vue',
     'html/json/*': 'vue',
+    'Assets/Scripts/store/*': 'vue && vuex',
     'Assets/Scripts/store.js': 'vue && vuex',
     'Assets/Scripts/router.js': 'vue && router',
     'Assets/Vue/Views/*': 'vue && router', // install "Views" if we have Vue-router

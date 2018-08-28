@@ -16,6 +16,8 @@ List of parameters:
 </div>
 ```
 
+{{#store}}
 ```vue
 <button @click="buttonClick">Click to count up store variable</button>
 ```
+{{/store}}

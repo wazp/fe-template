@@ -16,7 +16,8 @@ List of parameters:
     <secondondemand></secondondemand>
 </div>
 ```
-
+{{#store}}
 ```vue
 <p>Button has been clicked <span v-html="clicked"></span> times.</p>
 ```
+{{/store}}
