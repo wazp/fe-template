@@ -47,5 +47,7 @@ order:
 - +Base
 - +Grid
 - +Components
+{{#vue}}
 - +Vue
+{{/vue}}
 - -Javascript

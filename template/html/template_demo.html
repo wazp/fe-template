@@ -117,9 +117,11 @@
 
                         <div class="Grid">
 
+                            {{#vue}}
                             <div class="Grid-cell">
                                 <slider :dots="true" :arrows="true" :sliderstyle="'basic'" :api="'/html/json/slider-basic.json'"></slider>
                             </div>
+                            {{/vue}}
 
                             <div class="Grid-cell">
                                 <div class="Slider" data-slider="basic">
@@ -302,12 +304,14 @@
 
         <div class="ContentWidth">
             <div class="Grid Grid--withGutter">
+                {{#vue}}
                 <div class="Grid-cell u-xsm-sizeFull u-md-size1of2">
                     <first></first>
                 </div>
                 <div class="Grid-cell u-xsm-sizeFull u-md-size1of2">
                     <secondondemand></secondondemand>
                 </div>
+                {{/vue}}
             </div>
 
             <div class="Grid">
@@ -400,7 +404,7 @@
     </div>
 
     <script src="../Assets/bundled/main.bundle.js"></script>
-
+    {{#vue}}
     <script>
         window.carousel = {
             items: [
@@ -419,6 +423,6 @@
             ]
         }
     </script>
-
+    {{/vue}}
 </body>
 </html>

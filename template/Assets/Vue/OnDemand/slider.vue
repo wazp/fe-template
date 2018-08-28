@@ -22,7 +22,7 @@
     import slideThumbnail from './slide-thumbnail.vue'
 
     export default {
-        name: "slider",
+        name: 'slider',
         props: ['dots', 'arrows', 'sliderstyle', 'api', 'model'],
         data() {
             return {
@@ -30,32 +30,31 @@
             }
         },
         methods: {
-            init(){          
-                if (this.model){
+            init() {
+                if (this.model) {
                     this.items = window[this.model].items
-                } 
-                else {
+                } else {
                     this.getData()
-                }        
+                }
             },
-            getData(){
+            getData() {
                 fetch(this.api).then(response => response.json()).then(response => {
                     this.items = response
-                })        
+                })
             }
         },
-        updated(){
+        updated() {
             slider(this.$el, this.sliderstyle)
         },
-        mounted(){
+        mounted() {
             this.init()
         },
         components: {
-            slideBasic: slideBasic,
-            slideAutoplay: slideAutoplay,
-            slideThumbnail: slideThumbnail
+            slideBasic,
+            slideAutoplay,
+            slideThumbnail
         }
-    };
+    }
 </script>
 
 <style lang="less" scoped>

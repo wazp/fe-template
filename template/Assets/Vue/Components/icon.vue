@@ -8,34 +8,32 @@
     export default {
         name: 'icon',
         props: ['type'],
-        mounted: function () {
-            this.viewbox = this.getViewbox();
-            this.width = this.calcWidth();
+        mounted () {
+            this.viewbox = this.getViewbox()
+            this.width = this.calcWidth()
         },
         data() {
             return {
-                icon: "#" + this.type,
+                icon: '#' + this.type,
                 viewbox: null,
                 width: null
             }
         },
         methods: {
-            getViewbox: function () {
-                let id = this.type,
-                    svg = document.getElementById(id),
-                    viewbox = svg.getAttribute('viewBox');
-
-                return viewbox;
+            getViewbox () {
+                let id = this.type
+                let svg = document.getElementById(id)
+                let viewbox = svg.getAttribute('viewBox')
+                return viewbox
             },
 
-            calcWidth: function () {
-                let id = this.type,
-                    svg = document.getElementById(id),
-                    viewbox = svg.getAttribute('viewBox'),
-                    viewboxArr = viewbox.split(/\s+|,/),
-                    width = ((viewboxArr[2] / viewboxArr[3]) / 2 ) * 100 + '%';
-
-                return width;
+            calcWidth () {
+                let id = this.type
+                let svg = document.getElementById(id)
+                let viewbox = svg.getAttribute('viewBox')
+                let viewboxArr = viewbox.split(/\s+|,/)
+                let width = ((viewboxArr[2] / viewboxArr[3]) / 2) * 100 + '%'
+                return width
             }
         }
     }

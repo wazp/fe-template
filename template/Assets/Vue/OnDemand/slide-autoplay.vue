@@ -9,7 +9,7 @@
 
 <script>
 export default {
-    name: "item",
+    name: 'item',
     props: ['result']
 }
 </script>

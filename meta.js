@@ -91,11 +91,11 @@ module.exports = {
     },
   },
   filters: {
-    'Assets/Vue/**/*': 'vue',
+    'Assets/Vue/Components/* && Assets/Vue/OnDemand/*': 'vue',
     'html/json/*': 'vue',
     'Assets/Scripts/store.js': 'vue && vuex',
     'Assets/Scripts/router.js': 'vue && router',
-    'Assets/Vue/Views/**/*': 'vue && router', // install "Views" if we have Vue-router
+    'Assets/Vue/Views/*': 'vue && router', // install "Views" if we have Vue-router
     '.eslintrc.js': 'lint',
     '.eslintignore': 'lint',
     'test/unit/**/*': 'unit', // jest config and example spec
@@ -103,7 +103,6 @@ module.exports = {
     'Assets/**/*.test.js': 'unit', // only copy tests if unit is true
     'test/e2e/**/*': 'e2e',
     'stylemark.yml': 'styleguide', //styleguide config file
-    'Assets/Scripts/custom/toggle.js': 'styleguide', //styleguide sample js file
     'Assets/Vue/**/*.md': 'styleguide && vue' //styleguide md docs for vue components
   },
   complete: function(data, { chalk }) {
