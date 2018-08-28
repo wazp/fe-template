@@ -4,6 +4,7 @@
 import Vue from 'vue'
 {{#vuex}}
 import store from '@/Scripts/store'
+import ondemand from './ondemand'
 {{/vuex}}
 {{#router}}
 import router from '@/Scripts/router'
@@ -36,5 +37,6 @@ let App = new Vue({ // eslint-disable-line no-unused-vars
 {{/vue}}
 accordion()
 slider()
+ondemand()
 
 console.log('main.js done!')
