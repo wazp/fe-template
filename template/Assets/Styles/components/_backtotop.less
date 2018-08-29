@@ -1,0 +1,88 @@
+@import "../common/_variables.less";
+@import "../common/_mixins.less";
+
+/*
+---
+name: Back to top
+category: Components
+---
+
+Set to invisible until the user scrolls down the page.
+
+```backtotop.html
+<div>
+    <a href="#" id="back-to-top" title="Go to top" style="visibility: visible; opacity: 1;">Back to top</a>
+</div>
+```
+
+```backtotop.js
+    let backToTop = document.getElementById('back-to-top')
+
+    window.onscroll = function () {
+        scrollFunction()
+    }
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+            backToTop.classList.add('is-active')
+        } else {
+            backToTop.classList.remove('is-active')
+        }
+    }
+
+    backToTop.addEventListener('click', function (e) {
+        e.preventDefault()
+        window.scroll({
+            top: 0,
+            left: 0,
+            behavior: 'smooth'
+        })
+    })
+```
+*/
+
+#back-to-top{
+    display: block;
+    position: fixed; /* Fixed/sticky position */
+    bottom: 15px; /* Place the button at the bottom of the page */
+    right: 30px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color:#007dd7; /* Set a background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 15px; /* Some padding */
+    border-radius: 50%; /* Rounded corners */
+    font-size: 18px; /* Increase font size */
+    text-indent: -99999px;
+    width: 64px;
+    height: 64px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 500ms, visibility 500ms, bottom 250ms;
+
+    &.is-active{
+        visibility: visible;
+        opacity: 1;
+        bottom: 30px;
+    }
+
+    &:hover {
+        background-color: #555; /* Add a dark-grey background on hover */
+    }
+    &:before{
+        content: "";
+        border-style: solid;
+        border-color: #fff;
+        border-width: 0 2px 2px 0;
+        position: absolute;
+        width: 12px;
+        height: 12px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%) rotate(-135deg);
+        margin-top: 3px;
+        transition: border-color .15s;
+    }
+}

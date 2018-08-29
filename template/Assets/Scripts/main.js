@@ -14,6 +14,7 @@ import './vueImports'
 {{/vue}}
 import accordion from '@/Scripts/custom/accordion.js'
 import { slider } from '@/Scripts/custom/slider.js'
+import backtotop from '@/Scripts/custom/backtotop.js'
 
 {{#vue}}
 // generate svg sprite
@@ -36,5 +37,6 @@ let App = new Vue({ // eslint-disable-line no-unused-vars
 {{/vue}}
 accordion()
 slider()
+backtotop()
 
 console.log('main.js done!')
