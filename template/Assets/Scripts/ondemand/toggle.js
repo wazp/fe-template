@@ -5,9 +5,14 @@ category: Javascript
 ---
 Click to toggle `is-active` class to the parent.
 ```toggle.html
-<div class="Toggle js-module" data-module="toggle" data-toggle='{ "button": ".Toggle-button", "details": ".Toggle-details" }'>
-    <button class="Button Toggle-button">Toggle Button 1</button>
-    <div class="Toggle-details">Toggle Details 1</div>
+<div class="Toggle js-ondemand" data-ondemand="toggle">
+    <button class="Button Toggle-button">Toggle Button: Default Params</button>
+    <div class="Toggle-details">Toggle Details</div>
+</div>
+<hr />
+<div class="Toggle js-ondemand" data-ondemand="toggle" data-toggle='{ "button": ".Toggle-button", "details": ".Toggle-details" }'>
+    <button class="Button Toggle-button">Toggle Button: with params</button>
+    <div class="Toggle-details">Toggle Details</div>
 </div>
 ```
 */
