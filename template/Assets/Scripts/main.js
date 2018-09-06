@@ -12,9 +12,10 @@ import icon from '@/Vue/Components/icon.vue'
 import first from '@Components/first.vue'
 import './vueImports'
 {{/vue}}
+import ondemand from './ondemand'
 import accordion from '@/Scripts/custom/accordion.js'
-import { slider } from '@/Scripts/custom/slider.js'
 import backtotop from '@/Scripts/custom/backtotop.js'
+import { slider } from '@/Scripts/custom/slider.js'
 
 {{#vue}}
 // generate svg sprite
@@ -35,8 +36,9 @@ let App = new Vue({ // eslint-disable-line no-unused-vars
     }
 })
 {{/vue}}
+ondemand()
 accordion()
-slider()
 backtotop()
+slider()
 
 console.log('main.js done!')
