@@ -143,7 +143,7 @@ module.exports = {
             },
             {{/vue}}
             {
-                test: /\.js$/,
+                test: /\.m?js$/,
                 exclude: file => (
                     /node_modules/.test(file) &&
                     !/\.vue\.js/.test(file)
