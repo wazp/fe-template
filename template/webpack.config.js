@@ -139,7 +139,10 @@ module.exports = {
             {
                 test: /\.vue$/,
                 exclude: [/node_modules/],
-                loader: 'vue-loader'
+                use: [
+                    { loader: 'vue-loader' }{{#lint}},
+                    { loader: 'eslint-loader' }{{/lint}}
+                ]
             },
             {{/vue}}
             {
