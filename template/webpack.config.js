@@ -102,7 +102,15 @@ module.exports = {
             }
         }
     },
-    stats: 'errors-only',
+    stats: {
+        all: false,
+        colors: true,
+        env: true,
+        errors: true,
+        errorDetails: true,
+        timings: true,
+        warnings: true
+    },
     module: {
         rules: [
             {

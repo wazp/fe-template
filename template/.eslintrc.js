@@ -8,7 +8,7 @@ module.exports = {
         'browser': true,
         'es6': true
     },
-    'extends': 'standard',
+    'extends': ['standard'],
     'rules': {
         'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0,
         'indent': [2, 4], // 4 spaces - VS defaults
