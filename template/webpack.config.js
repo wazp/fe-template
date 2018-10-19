@@ -151,15 +151,13 @@ module.exports = {
                 use: [
                     {
                         loader: 'babel-loader'
-                    },
-                    {{#lint}}
+                    }{{#lint}},
                     {
                         loader: 'eslint-loader',
                         options: {
                             formatter: require('eslint-friendly-formatter')
                         }
-                    }
-                    {{/lint}}
+                    }{{/lint}}
                 ]
             },
             { // SVG symbols to be made into a sprite SVG!

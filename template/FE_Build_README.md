@@ -40,6 +40,10 @@ Visual Studio do for us automatically, unfortunately.
 ![Image of External Web Tools setup](https://raw.githubusercontent.com/wazp/fe-template/master/doc/vs_npm_runner.png)
 >If already installed, please check if there's any update to be downloaded.
 
+### Visual Linter
+
+We recommend that you install [VisualLinter](https://marketplace.visualstudio.com/items?itemName=JeanAlexanderWoldner.VisualLinter) so you get realtime JS linting in Visual Studio as well.
+
 ### Command line work
 
 Ok, so we have the Visual Studio tools installed as well as the latest version of Node.js. When opening up the project in Visual Studio, the
@@ -62,22 +66,20 @@ exactly what is going on during the install. So, time for some `cmd` action!
 ## Running the build
 
 package.json have been configured to run one of the npm scripts on *Project Open*, that starts a watcher in the background
-that picks up on any changes to the source code to trigger a rebuild.
-
-It is also configured to run the `dev` script on every Build you do in Visual Studio, to make sure the Back End developers
-also have a latest compiled code.
+that picks up on any changes to the source code to trigger a rebuild. It will also automatically run the dev build after it installs
+all the node packages.
 
 If you want to manually trigger a build, you can do so from the Task Runner Explorer (`Ctrl-Alt-Bkspace`), or if you prefer with the command line:
 ```console
 > npm run dev
 ```
->*TODO: Update this later on to include the correct stuff!*
+
 Other options include:
 - `dev` for a development build
+- `dev:watch` to start the watcher (auto compile on save file)
 - `dev:stats` to generate html report of bundle size for development builds
 - `build` for a production build
 - `build:stats` to generate html report of bundle size for production builds
-- `watcher` to start the watcher (you probably don't want this running outside of the NPM Task runner in VS)
 {{#lint}}
 - `lint` to lint your .js{{#vue}}/.vue{{/vue}} files. Please note that this will always go through _all_ files, not just the ones that become bundled in the end.
 - `lint:fix` to automatically fix common lint mistakes (like no new line etc)
@@ -94,11 +96,7 @@ Other options include:
 
 Just go about updating your files as usual, you have a watcher in the background that should pick up on changes automatically.
 
-When adding new scss files, just add them normally as an import to the main scss file they belong.
-
-If adding a totally new file, you might have to add it to `webpack.config.js` as well, see the [documentation](./FE_WebPack.README.md) regarding this.
-
->**Note:** If you add a totally new file, do NOT include the resulting bundle in the project/solution/tfs!
+When adding new less files, just add them normally as an import to the main scss file they belong.
 
 ## Production Process
 
