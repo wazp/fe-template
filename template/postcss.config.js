@@ -1,6 +1,8 @@
 module.exports = {
     plugins: {
-        autoprefixer: {},
+        autoprefixer: {
+            grid: true
+        },
         'postcss-pxtorem': {},
         'postcss-color-rgba-fallback': {},
         'css-mqpacker': { sort: true },
