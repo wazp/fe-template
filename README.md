@@ -30,6 +30,8 @@ Include all generated files into the solution, except the files under `/Assets/b
 
 
 TODOS:
+- Add stylesheet for styleguide
+  - Outline Grid in the styleguide so client can see the invisible grid cells
 - [x] Make linting work good in VS
   - Needs extension, VisualLinter (https://marketplace.visualstudio.com/items?itemName=JeanAlexanderWoldner.VisualLinter)
 - [x] Decide on Less/cssnext based on VS compatibility - FIXED - we will go with LESS.
